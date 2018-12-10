@@ -19,6 +19,9 @@ clean::
 	@echo "This is \"clean\" in the local Makefile."
 	rm -fv *.log *.blg *.aux
 
+spell::
+	detex book_chapter.tex | aspell --lang=EN_GB list
+
 allclean: clean
 	rm -fv *.bbl $(target).pdf
 
