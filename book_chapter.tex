@@ -3,14 +3,47 @@
 \usepackage{url}
 \usepackage{siunitx}
 \begin{document}
+\title{New Book}
+\author{Joe Loughry\thanks{This is the chapter titled `Optical TEMPEST' in
+Ireneusz Kubiak's new book.}}
 \chapter{Optical TEMPEST}
-\title{TBD}
-\author{Joe Loughry\thanks{Part of this research was presented at EMC
-Europe 2018, in Amsterdam, the Netherlands (\emph{International Symposium and
-Exhibition on Electromagnetic Compatibility}), 27--30 August 2018.}}
-\maketitle
-\chapter{Optical TEMPEST}
-ABC\cite{Loughry2018a}.
+\section{History}
+\subsection{Information Leakage}
+\subsubsection{Electromagnetic}
+Field telephones in WWI; {\it funkspiel} in WWII; electromechanical cypher
+machines in West Berlin. (This topic is covered well elsewhere in the book.)
+\subsection{TEMPEST}
+The protection of information from remote eavesdropping; air gaps; control
+zones; protected distribution systems (PDS)\footnote{Visibility, stories of
+poison gas, flammable gas, pressure gauges---reference Anderson (2001).} The
+inclusion of acoustic but overlooking of optical, with the exception of
+shoulder surfing. Contextual blindness?
+\subsection{Optical}
+\section{Physical Principles}
+Photons, energy, generation atmospheric absorption. Recent development of
+high efficiency LEDs (and the unexpected effect that had on reversing LEDs).
+Telescopic optics, fibreoptic collection.
+\subsection{The Unreasonable Effectiveness of Signal Processing}
+\section{Current Research}
+Guri {\it et al.} But they are covert channels. But these are covert
+channels. Difference between covert channels and side channels
+(ref.\ Kocher).
+\subsection{Resurgence of Interest 201?--present}
+Aside from the `Compromising Reflections' paper, not much happened until
+around 2010, except for\ldots\footnote{Parts of this section was presented at
+EMC Europe 2018, in Amsterdam, the Netherlands (\emph{International Symposium
+and Exhibition on Electromagnetic Compatibility}), 27--30 August 2018
+\cite{Loughry2018a}.}
+\subsection{Perspective}
+It's not only LEDs; and LEDs are not only used as status indicators; Figure:
+\emph{all} the information channels in and out of a PC---or more accurately,
+an information processing system. A new conception of control zone;
+Robinson's `energy gap' concept and its applicability to crypto.
+\section{Future Directions}
+Unpublished research
+\subsection{LED Reversing}
+\subsubsection{Classical covert channels}
+\subsubsection{Dead blow hammer}
 \bibliographystyle{plain}
 \bibliography{consolidated_bibtex_file}
 \end{document}
