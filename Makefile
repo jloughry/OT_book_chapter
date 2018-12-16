@@ -20,7 +20,7 @@ clean::
 	rm -fv *.log *.blg *.aux
 
 spell::
-	detex book_chapter.tex | aspell --lang=EN_GB list
+	detex $(target).tex | aspell --lang=EN_GB list
 
 allclean: clean
 	rm -fv *.bbl $(target).pdf
