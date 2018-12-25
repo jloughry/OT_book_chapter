@@ -1,3 +1,8 @@
 .DS_Store
 
 book_chapter.pdf
+
+book_chapter.aux
+book_chapter.bbl
+book_chapter.blg
+book_chapter.log

@@ -15,6 +15,9 @@ $(target).pdf: $(target).tex Makefile
 vi:
 	vi $(target).tex
 
+touch:
+	touch $(target).tex
+
 clean::
 	@echo "This is \"clean\" in the local Makefile."
 	rm -fv *.log *.blg *.aux
