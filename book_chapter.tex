@@ -10,6 +10,7 @@
 \title{New Book}
 \author{Joe Loughry}
 \setcounter{chapter}{6} % This chapter will be Chapter 7 of the book.
+\setcounter{page}{99} % Arbitrary page number to test page numbering.
 \chapter{Optical TEMPEST}
 \lettrine[lines=3]{T}{he} leakage of information from a system through a
 channel of modulated light is a vulnerability. The operative terms are `leakage',
@@ -20,10 +21,19 @@ large volumes of information; it might be extremely valuable information like
 cryptographic keys. \emph{Channels} in the Shannon sense\cite{Shannon1948}
 have a bandwidth-delay product, and noise; both of these are important to
 understand the risk of optical TEMPEST. And finally, \emph{modulated light}
-carries the signal; usually we think of light modulated in the time
-domain.\footnote{Light modulated in the space domain is an \emph{image};
-`shoulder surfing' is a real risk but not the one we are concerned with
-here.}
+carries the signal. Light can be modulated in time or in space---here we think of
+light modulated in the time domain. Light modulated in the space domain is an
+\emph{image}; `shoulder surfing' is a real risk but not the one we are
+concerned with here.
+
+Further in the time domain, light can be amplitude-modulated, or frequency, or
+phase. Of the three possibilities, amplitude modulation (AM) is the most
+plausible, from a physical standpoint, because optical TEMPEST most often
+depends on the accidental existence of a modulated---or modulatable---channel,
+and AM is the simplest and most straightforward to implement.
+
+on-off keying (OOK) b/c accidental; the adversary must exploit what's there
+Manchester, if deliberate
 
 Depending on the nature of the leakage, information leakage through optical
 emanations may or may not be a covert channel. By the classical definition,
