@@ -5,6 +5,7 @@
 \usepackage{harvard}
 \usepackage{GoudyIn,lettrine}
 \renewcommand\LettrineFontHook{\GoudyInfamily}
+\newcommand{\URL}[1]{$\langle$\url{#1}$\rangle$}
 % This is the chapter titled `Optical TEMPEST' in Ireneusz Kubiak's new book.
 \begin{document}
 \title{New Book}
@@ -74,8 +75,8 @@ LEDs and CRTs---Figure \ref{figure:slow-mo_guys_crt}.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=3in]{slow-mo_guys_crt.png}
-  \caption{High speed camera image of CRT electron beam exciting phosphor
-    dots.}
+  \caption{High speed camera image (380\,117 frames per second) of CRT electron
+    beam exciting phosphor dots \protect\cite{Free2018}.}
   \label{figure:slow-mo_guys_crt}
 \end{figure}
 \section{Physical Principles}
