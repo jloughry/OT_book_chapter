@@ -33,6 +33,9 @@ plausible, from a physical standpoint, because optical TEMPEST most often
 depends on the accidental existence of a modulated---or modulatable---channel,
 and AM is the simplest and most straightforward to implement.
 
+If controlled automatically, indicators are not as useful as if they may be set
+by the adversary.
+
 on-off keying (OOK) b/c accidental; the adversary must exploit what's there
 Manchester, if deliberate
 
@@ -134,14 +137,40 @@ Modern microprocessors do not expose their address and data bus lines as
 earlier ones did. But what happens when LEDs on external pins (whether
 configured for output, by the system designer, or reconfigured for input by an
 attacker) drive those pins unexpectedly?
-
-first visible LEDs for indicators in 1968
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{timeline.pdf}
+  \caption{Confluence of several technological developments made reversing LEDs
+    possible.}
+  \label{figure:timeline}
+\end{figure}
+first visible LEDs for indicators in 1968 (Figure \ref{figure:timeline}).
 photoresponsivity of LEDs in 1973
 first high brightness LEDs used in 1993
 GPIO in 2011 (Google Trends) although the concept dates to Intel 8255 and MOS
-6522. When were programmable pull-up and pull-down resistors introduced?
+6522. The Atmega8 used by Arduino introduced programmable pull-up and pull-down
+resistors in 1996 \cite{Mims1973b,Atmel2013,Stringfellow1997}.
 
-\cite{Stringfellow1997}
+External hardware pull-up or pull-down resistors, as on the Intel 8255 and MOS
+6522 chips used in the 1980s, were of course inaccessible to an adversary; CMOS
+variants of the 8255 had internal pull-up resistors but they were not
+programmable. (Automatically configured pull-up or pull-down resistors may be
+considered a special case of external discrete hardware components.)
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=2in]{nonsensical.pdf}
+  \caption{Programmable pull-up and pull-down resistors can be abused by
+    setting them in non-sensical ways, such as this, to reverse-bias an LED
+    and sense it---as a photodiode---in the (much faster) photoconductive
+    mode.}
+  \label{figure:nonsensical}
+\end{figure}
+Programmable pull-up and pull-down resistors, introduced in 1996 with the
+ATmega8 microcontroller \cite{Atmel2013} are far more useful to an adversary
+adversary because they can be set in nonsensical ways (Figure
+\ref{figure:nonsensical}).\footnote{The trick only works if the designer chose
+to save a power pin by connecting an LED to a pair of GPIO pins, which might
+make sense if unused GPIO pins happen to be available.}
 
 {\it Cf.}\ Snowden's disclosures of NSA's TAO catalogue, for a certainty.
 \subsubsection{Classical covert channels}

@@ -12,6 +12,9 @@ $(target).pdf: $(target).tex Makefile
 		$(latex_cmd) $(target) ; \
 	done
 
+reset:: touch
+	rm -fv *.bbl
+
 vi:
 	vi $(target).tex
 
