@@ -85,227 +85,231 @@
          x="34.875"
          y="32.780544"
          style="stroke-width:0.26458332px;font-size:4.23333333px;" /></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="5.9947753"
-       y="48.187504"
-       id="text969"><tspan
-         sodipodi:role="line"
-         x="5.9947753"
-         y="48.187504"
-         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
-         id="tspan991">First</tspan><tspan
-         sodipodi:role="line"
-         x="5.9947753"
-         y="52.160187"
-         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
-         id="tspan1083">visible</tspan><tspan
-         sodipodi:role="line"
-         x="5.9947748"
-         y="56.13287"
-         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
-         id="tspan993">LED</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="25.776701"
-       y="71.90834"
-       id="text1005"><tspan
-         sodipodi:role="line"
-         x="25.776701"
-         y="71.90834"
-         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
-         id="tspan1073">Discovery of</tspan><tspan
-         sodipodi:role="line"
-         x="25.776701"
-         y="77.200005"
-         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
-         id="tspan1081">LED optical</tspan><tspan
-         sodipodi:role="line"
-         x="25.776701"
-         y="82.491676"
-         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
-         id="tspan1077">responsivity</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="105.86765"
-       y="45.464787"
-       id="text1029"><tspan
-         sodipodi:role="line"
-         x="105.86765"
-         y="45.464787"
-         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
-         id="tspan1031">High</tspan><tspan
-         sodipodi:role="line"
-         x="105.86765"
-         y="50.756454"
-         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
-         id="tspan1035">brightness</tspan><tspan
-         sodipodi:role="line"
-         x="105.86765"
-         y="56.048119"
-         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
-         id="tspan1037">LEDs</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="117.89503"
-       y="71.947617"
-       id="text1041"><tspan
-         sodipodi:role="line"
-         x="117.89503"
-         y="71.947617"
-         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
-         id="tspan1047">GPIO</tspan><tspan
-         sodipodi:role="line"
-         x="117.89503"
-         y="77.239281"
-         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
-         id="tspan1085">pins</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="177.95015"
-       y="71.947617"
-       id="text1051"><tspan
-         sodipodi:role="line"
-         x="177.95015"
-         y="71.947617"
-         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
-         id="tspan1061">GPIO</tspan><tspan
-         sodipodi:role="line"
-         x="177.95015"
-         y="77.239281"
-         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
-         id="tspan1065">begins</tspan><tspan
-         sodipodi:role="line"
-         x="177.95015"
-         y="82.530952"
-         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
-         id="tspan1089">to trend</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="143.0854"
-       y="50.760586"
-       id="text1059"><tspan
-         sodipodi:role="line"
-         id="tspan1057"
-         x="143.0854"
-         y="50.760586"
-         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px">Arduino</tspan><tspan
-         sodipodi:role="line"
-         x="143.0854"
-         y="56.052254"
-         style="stroke-width:0.26458332px"
-         id="tspan1087"><tspan
-   style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique'"
-   id="tspan1093">introduce</tspan>d</tspan></text>
     <g
-       id="g1114">
+       id="g538"
+       transform="translate(11.641667)">
       <text
-         id="text18"
-         y="64.965752"
-         x="5.8218317"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="text969"
+         y="48.187504"
+         x="5.9947753"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';stroke-width:0.26458332px"
-           y="64.965752"
+           id="tspan991"
+           style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
+           y="48.187504"
+           x="5.9947753"
+           sodipodi:role="line">First</tspan><tspan
+           id="tspan1083"
+           style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
+           y="52.160187"
+           x="5.9947753"
+           sodipodi:role="line">visible</tspan><tspan
+           id="tspan993"
+           style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
+           y="56.13287"
+           x="5.9947748"
+           sodipodi:role="line">LED</tspan></text>
+      <text
+         id="text1005"
+         y="71.90834"
+         x="25.776701"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan1073"
+           style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
+           y="71.90834"
+           x="25.776701"
+           sodipodi:role="line">Discovery of</tspan><tspan
+           id="tspan1081"
+           style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
+           y="77.200005"
+           x="25.776701"
+           sodipodi:role="line">LED optical</tspan><tspan
+           id="tspan1077"
+           style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
+           y="82.491676"
+           x="25.776701"
+           sodipodi:role="line">responsivity</tspan></text>
+      <text
+         id="text1029"
+         y="45.464787"
+         x="105.86765"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan1031"
+           style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
+           y="45.464787"
+           x="105.86765"
+           sodipodi:role="line">High</tspan><tspan
+           id="tspan1035"
+           style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
+           y="50.756454"
+           x="105.86765"
+           sodipodi:role="line">brightness</tspan><tspan
+           id="tspan1037"
+           style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
+           y="56.048119"
+           x="105.86765"
+           sodipodi:role="line">LEDs</tspan></text>
+      <text
+         id="text1041"
+         y="71.947617"
+         x="117.89503"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan1047"
+           style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
+           y="71.947617"
+           x="117.89503"
+           sodipodi:role="line">GPIO</tspan><tspan
+           id="tspan1085"
+           style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
+           y="77.239281"
+           x="117.89503"
+           sodipodi:role="line">pins</tspan></text>
+      <text
+         id="text1051"
+         y="71.947617"
+         x="177.95015"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan1061"
+           style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
+           y="71.947617"
+           x="177.95015"
+           sodipodi:role="line">GPIO</tspan><tspan
+           id="tspan1065"
+           style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
+           y="77.239281"
+           x="177.95015"
+           sodipodi:role="line">begins</tspan><tspan
+           id="tspan1089"
+           style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
+           y="82.530952"
+           x="177.95015"
+           sodipodi:role="line">to trend</tspan></text>
+      <text
+         id="text1059"
+         y="50.760586"
+         x="143.0854"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique';stroke-width:0.26458332px"
+           y="50.760586"
+           x="143.0854"
+           id="tspan1057"
+           sodipodi:role="line">Arduino</tspan><tspan
+           id="tspan1087"
+           style="stroke-width:0.26458332px"
+           y="56.052254"
+           x="143.0854"
+           sodipodi:role="line"><tspan
+   id="tspan1093"
+   style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Oblique'">introduce</tspan>d</tspan></text>
+      <g
+         id="g1114">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            x="5.8218317"
-           id="tspan16"
-           sodipodi:role="line">1968</tspan></text>
-      <text
-         id="text26"
-         y="64.963684"
-         x="25.821831"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';stroke-width:0.26458332px"
-           y="64.963684"
+           y="64.965752"
+           id="text18"><tspan
+             sodipodi:role="line"
+             id="tspan16"
+             x="5.8218317"
+             y="64.965752"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';stroke-width:0.26458332px">1968</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            x="25.821831"
-           id="tspan24"
-           sodipodi:role="line">1973</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="105.82183"
-         y="64.963684"
-         id="text30"><tspan
-           sodipodi:role="line"
-           id="tspan28"
-           x="105.82183"
            y="64.963684"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';stroke-width:0.26458332px">1993</tspan></text>
-      <text
-         id="text34"
-         y="64.966438"
-         x="178.1367"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';stroke-width:0.26458332px"
-           y="64.966438"
+           id="text26"><tspan
+             sodipodi:role="line"
+             id="tspan24"
+             x="25.821831"
+             y="64.963684"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';stroke-width:0.26458332px">1973</tspan></text>
+        <text
+           id="text30"
+           y="64.963684"
+           x="105.82183"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';stroke-width:0.26458332px"
+             y="64.963684"
+             x="105.82183"
+             id="tspan28"
+             sodipodi:role="line">1993</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            x="178.1367"
-           id="tspan32"
-           sodipodi:role="line">2011</tspan></text>
-      <path
-         inkscape:connector-curvature="0"
-         id="path42"
-         d="m 5.8948677,59.287371 v 1.8"
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <text
-         id="text901"
-         y="64.966438"
-         x="117.81562"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';stroke-width:0.26458332px"
            y="64.966438"
+           id="text34"><tspan
+             sodipodi:role="line"
+             id="tspan32"
+             x="178.1367"
+             y="64.966438"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';stroke-width:0.26458332px">2011</tspan></text>
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 5.8948677,59.287371 v 1.8"
+           id="path42"
+           inkscape:connector-curvature="0" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            x="117.81562"
-           id="tspan899"
-           sodipodi:role="line">1996</tspan></text>
-      <path
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 25.894868,59.287371 v 1.8"
-         id="path905"
-         inkscape:connector-curvature="0" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path907"
-         d="m 105.89487,59.287371 v 1.8"
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 117.89487,59.287371 v 1.8"
-         id="path909"
-         inkscape:connector-curvature="0" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path911"
-         d="m 177.89487,59.287371 v 1.8"
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path913"
-         d="M 5.762576,60.308285 H 177.63857 v -0.365834"
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.24801101px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="143.10469"
-         y="64.966438"
-         id="text1055"><tspan
-           sodipodi:role="line"
-           id="tspan1053"
-           x="143.10469"
            y="64.966438"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';stroke-width:0.26458332px">2003</tspan></text>
-      <path
-         inkscape:connector-curvature="0"
-         id="path1091"
-         d="m 143.0823,59.287371 v 1.8"
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+           id="text901"><tspan
+             sodipodi:role="line"
+             id="tspan899"
+             x="117.81562"
+             y="64.966438"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';stroke-width:0.26458332px">1996</tspan></text>
+        <path
+           inkscape:connector-curvature="0"
+           id="path905"
+           d="m 25.894868,59.287371 v 1.8"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 105.89487,59.287371 v 1.8"
+           id="path907"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path909"
+           d="m 117.89487,59.287371 v 1.8"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 177.89487,59.287371 v 1.8"
+           id="path911"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.24801101px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 5.762576,60.308285 H 177.63857 v -0.365834"
+           id="path913"
+           inkscape:connector-curvature="0" />
+        <text
+           id="text1055"
+           y="64.966438"
+           x="143.10469"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';stroke-width:0.26458332px"
+             y="64.966438"
+             x="143.10469"
+             id="tspan1053"
+             sodipodi:role="line">2003</tspan></text>
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 143.0823,59.287371 v 1.8"
+           id="path1091"
+           inkscape:connector-curvature="0" />
+      </g>
     </g>
   </g>
 </svg>
