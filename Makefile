@@ -1,4 +1,4 @@
-target = book_chapter
+target = chapter_7
 
 latex_cmd = pdflatex
 
