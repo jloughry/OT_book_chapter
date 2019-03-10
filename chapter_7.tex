@@ -11,15 +11,16 @@
 \title{New Book}
 \author{Joe Loughry}
 \setcounter{chapter}{6} % This chapter will be Chapter 7 of the book.
-\setcounter{page}{99} % Arbitrary page number to test page numbering.
+\setcounter{page}{262} % Page 263 will be the first page of this file.
+\thispagestyle{empty}
 \chapter{Optical TEMPEST}
 \lettrine[lines=3]{T}{he} leakage of information from a system through a
 channel of modulated light is a vulnerability. The operative terms are `leakage',
-`information', `channel', and `modulated light'. \emph{Leakage} might be
+`information', `channel', and `modulated light'. The \emph{leakage} might be
 accidental or it might be caused on purpose by an adversary, but it is not
 supposed to be there. \emph{Information} can be anything from a single bit to
 large volumes of information; it might be extremely valuable information like
-cryptographic keys. \emph{Channels} in the Shannon sense\cite{Shannon1948}
+cryptographic keys. \emph{Channels} in the Shannon sense \cite{Shannon1948}
 have a bandwidth-delay product, and noise; both of these are important to
 understand the risk of optical TEMPEST. And finally, \emph{modulated light}
 carries the signal. Light can be modulated in time or in space---here we think of
@@ -175,6 +176,12 @@ make sense if unused GPIO pins happen to be available.}
 {\it Cf.}\ Snowden's disclosures of NSA's TAO catalogue, for a certainty.
 \subsubsection{Classical covert channels}
 \subsubsection{Dead blow hammer}
+
+\section{Bell's Inequality}
+For the \SI{33}{\pico\second} interval between those two points, the light does
+not exist in this universe.
+
+Bell's Inequality \cite{Bell1964}.
 \bibliographystyle{agsm}
 \bibliography{consolidated_bibtex_file}
 \end{document}
