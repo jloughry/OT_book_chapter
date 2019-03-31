@@ -12,6 +12,9 @@ $(target).pdf: $(target).tex Makefile
 		$(latex_cmd) $(target) ; \
 	done
 
+fix_boldface_for_memoir_class:
+	sed -e 's/{\\\bf /\\\textbf{/g' $(target).bbl
+
 reset:: touch
 	rm -fv *.bbl
 
