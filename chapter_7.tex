@@ -1,11 +1,14 @@
-\documentclass[a4paper,twoside]{memoir}
+% \documentclass[a4paper,twoside]{memoir}
+\documentclass[a4paper,twoside,oldfontcommands]{memoir}
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{siunitx}
-\usepackage{harvard}
+\usepackage{natbib}
+\usepackage{har2nat}
 \usepackage{GoudyIn,lettrine}
 \renewcommand\LettrineFontHook{\GoudyInfamily}
 \newcommand{\URL}[1]{$\langle$\url{#1}$\rangle$}
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
 % This is the chapter titled `Optical TEMPEST' in Ireneusz Kubiak's new book.
 \begin{document}
 \title{New Book}
@@ -28,11 +31,13 @@ light modulated in the time domain. Light modulated in the space domain is an
 \emph{image}; `shoulder surfing' is a real risk but not the one we are
 concerned with here.
 
-Further in the time domain, light can be amplitude-modulated, or frequency, or
-phase. Of the three possibilities, amplitude modulation (AM) is the most
-plausible, from a physical standpoint, because optical TEMPEST most often
-depends on the accidental existence of a modulated---or modulatable---channel,
-and AM is the simplest and most straightforward to implement.
+Further in the time domain, light can be amplitude-modulated, or
+frequency-modulated, or phase-modulated. Of the three possibilities, amplitude
+modulation (AM) is the most plausible for optical TEMPEST (from a physical
+standpoint) because optical TEMPEST vulnerabilities most often depend on the
+accidental or improvised existence of a modulated---or modulatable---channel,
+and AM is likely the simplest and most straightforward to implement. On-off
+keying (OOK, or 
 
 If controlled automatically, indicators are not as useful as if they may be set
 by the adversary.
@@ -55,7 +60,12 @@ least infrared (wavelengths longer than \SI{700}{\nano\metre}) because of the
 ubiquitousness of light emitting diode (LED) sources in that range and their
 convenient invisibility to humans.
 
-reiterate the Class I, II, III taxonomy
+\sidebar{\centerline{\textbf{How dangerous?}}\medskip
+\textbf{Class I} optical emanations are correlated only minimally with the state
+of a device; they tell if it is on or off. \textbf{Class II} emanations leak
+information about the activity level of a device---is it busy or idle?
+\textbf{Class III} optical emanations are correlated with the contents of data,
+and are extremely hazardous.}
 
 Cite \cite{Allain2019}.
 
@@ -74,6 +84,12 @@ everything related to emanations other than RF is redacted
 \subsubsection{Electromagnetic}
 Field telephones in WWI; \emph{funkspiel} in WWII; electromechanical cypher
 machines in West Berlin. (This topic is covered well elsewhere in the book.)
+\sidebar{\centerline{\textbf{Video Cameras}}\medskip
+It is tempting to think of using video cameras to capture an entire rack of LED
+indicators at once, but that won't work. The reason is because video cameras
+have a relatively low \emph{frame rate}---usually 30--240 frames per
+second---and this is not fast enough to capture the transitions we're
+interested in.}
 \subsection{TEMPEST}
 The protection of information from remote eavesdropping; air gaps; control
 zones; protected distribution systems (PDS)\footnote{Visibility, stories of
