@@ -55,69 +55,129 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="48.91032"
-       y="61.535549"
+       x="56.661137"
+       y="63.940975"
        id="text12"><tspan
          sodipodi:role="line"
          id="tspan10"
-         x="48.91032"
-         y="61.535549"
+         x="56.661137"
+         y="63.940975"
          style="stroke-width:0.26458332px">Optical TEMPEST</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="44.366737"
-       y="19.841501"
-       id="text16"><tspan
-         sodipodi:role="line"
-         id="tspan14"
-         x="44.366737"
-         y="19.841501"
-         style="stroke-width:0.26458332px">Compromising Emanations</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="45.168549"
-       y="41.757603"
-       id="text20"><tspan
-         sodipodi:role="line"
-         id="tspan18"
-         x="45.168549"
-         y="41.757603"
-         style="stroke-width:0.26458332px">RF</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="35.814117"
-       y="35.075863"
-       id="text24"><tspan
-         sodipodi:role="line"
-         id="tspan22"
-         x="35.814117"
-         y="35.075863"
-         style="stroke-width:0.26458332px">Acoustical</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="48.375782"
-       y="48.706608"
-       id="text28"><tspan
-         sodipodi:role="line"
-         id="tspan26"
-         x="48.375782"
-         y="48.706608"
-         style="stroke-width:0.26458332px">Light</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="25.657875"
-       y="29.19593"
-       id="text32"><tspan
-         sodipodi:role="line"
-         id="tspan30"
-         x="25.657875"
+    <g
+       id="g142"
+       transform="translate(0,-5.2916666)">
+      <rect
+         ry="1.1247233"
+         y="14.224072"
+         x="22.589279"
+         height="7.4981489"
+         width="46.108826"
+         id="rect135"
+         style="opacity:1;fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.27939832;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text16"
+         y="18.882652"
+         x="45.629913"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332px"
+           y="18.882652"
+           x="45.629913"
+           id="tspan14"
+           sodipodi:role="line">Compromising Emanations</tspan></text>
+    </g>
+    <g
+       id="g179"
+       transform="translate(8.9958334,-1.5874999)">
+      <rect
+         ry="1.1486464"
+         y="40.533047"
+         x="41.626064"
+         height="7.6576357"
+         width="8.31604"
+         id="rect174"
+         style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.11991137;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text20"
+         y="45.627075"
+         x="45.679008"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="fill:#ffffff;stroke:#ffffff;stroke-width:0.26458332px"
+           y="45.627075"
+           x="45.679008"
+           id="tspan18"
+           sodipodi:role="line">RF</tspan></text>
+    </g>
+    <g
+       id="g172"
+       transform="translate(8.2201783,-1.9237678)">
+      <rect
+         ry="1.1392184"
+         y="31.687031"
+         x="24.360085"
+         height="7.5947833"
+         width="19.478508"
+         id="rect167"
+         style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.18276383;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text24"
+         y="36.714321"
+         x="34.193218"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332px"
+           y="36.714321"
+           x="34.193218"
+           id="tspan22"
+           sodipodi:role="line">Acoustical</tspan></text>
+    </g>
+    <g
+       id="g186"
+       transform="translate(6.9500837,0.07091391)">
+      <rect
+         ry="1.1459974"
+         y="49.707268"
+         x="51.987854"
+         height="7.6399765"
+         width="10.971076"
+         id="rect181"
+         style="opacity:1;fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:0.1375705;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text28"
+         y="54.406616"
+         x="57.379513"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332px"
+           y="54.406616"
+           x="57.379513"
+           id="tspan26"
+           sodipodi:role="line">Light</tspan></text>
+    </g>
+    <g
+       id="g149"
+       transform="translate(0,-5.2916666)">
+      <rect
+         ry="1.1383091"
+         y="24.142979"
+         x="15.325059"
+         height="7.5887208"
+         width="20.808792"
+         id="rect144"
+         style="opacity:1;fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:0.18882629;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text32"
          y="29.19593"
-         style="stroke-width:0.26458332px">Conducted</tspan></text>
+         x="25.657875"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332px"
+           y="29.19593"
+           x="25.657875"
+           id="tspan30"
+           sodipodi:role="line">Conducted</tspan></text>
+    </g>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -343,5 +403,36 @@
          x="140.3165"
          y="51.646572"
          style="stroke-width:0.26458332px">Modulation</tspan></text>
+    <rect
+       ry="1.1247233"
+       y="5.746666"
+       x="149.53964"
+       height="7.4981489"
+       width="46.108826"
+       id="rect137"
+       style="opacity:1;fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.27939832;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <g
+       id="g165"
+       transform="translate(0,-5.2916666)">
+      <rect
+         style="opacity:1;fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:0.17771612;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect151"
+         width="18.414419"
+         height="7.5960207"
+         x="49.986137"
+         y="24.139328"
+         ry="1.1394042" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="59.524544"
+         y="29.19593"
+         id="text155"><tspan
+           sodipodi:role="line"
+           id="tspan153"
+           x="59.524544"
+           y="29.19593"
+           style="stroke-width:0.26458332px">Radiated</tspan></text>
+    </g>
   </g>
 </svg>
