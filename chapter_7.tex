@@ -29,7 +29,12 @@ understand the risk of optical TEMPEST. And finally, \emph{modulated light}
 carries the signal. Light can be modulated in time or in space---here we think of
 light modulated in the time domain. Light modulated in the space domain is an
 \emph{image}; `shoulder surfing' is a real risk but not the one we are
-concerned with here.
+concerned with here.\footnote{\emph{Shoulder surfing} is the clandestine
+surveillance of display screens or keyboard activity for the purpose of
+stealing secrets. It might be done visually or through a video camera; it can
+even be done without line-of-sight, by deconvoluting a distorted reflection off
+a shiny object in the optical path
+\cite{Backes2008,Backes2009a,Raguram2011,Jenkins2013a,Xu2013a}.}
 
 Further in the time domain, light can be amplitude-modulated, or
 frequency-modulated, or phase-modulated. Of the three possibilities, amplitude
@@ -37,14 +42,35 @@ modulation (AM) is the most plausible for optical TEMPEST (from a physical
 standpoint) because optical TEMPEST vulnerabilities most often depend on the
 accidental or improvised existence of a modulated---or modulatable---channel,
 and AM is likely the simplest and most straightforward to implement. On-off
-keying (OOK, or 
+keying (OOK) is the simplest AM method and the most likely to occur
+accidentally; in OOK, light \emph{on} means a binary 0 or 1, and light
+\emph{off} means the other kind. OOK is not self-clocking: the receiver must
+know {\it a priori} or be able to figure out the sender's intended \emph{bit
+interval} to decode the signal; there are better \emph{line codes} than OOK
+that a deliberate sender inside the target system may be able to
+use---Manchester coding, for example---but most often the adversary is limited
+to exploiting sources and methods that are already there.
+\subsection{Light Sources}
+Compromising emanations take one of two paths: they may be \emph{conducted} or
+\emph{radiated}. Light sources vulnerable to optical TEMPEST include visual
+indicators---a subset of which are video displays---and discrete indicators. If
+controlled automatically, indicators are not as useful as if they may be set by
+the adversary.
 
-If controlled automatically, indicators are not as useful as if they may be set
-by the adversary.
-
-on-off keying (OOK) b/c accidental; the adversary must exploit what's there
-Manchester, if deliberate
-
+Figure \ref{figure:taxonomy} shows the taxonomy of optical TEMPEST in the
+larger context of vulnerabilities due to \emph{compromising
+emanations}---exploitable leakage of measurable physical phenomena out of a
+system that can be interpreted by an adversary to gain information about the
+internal state of the system.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{taxonomy.pdf}
+  \rule{.1pt}{1in} \\
+  {\huge Taxonomy continues here} \\
+  \rule{.1pt}{1in}
+  \caption{Taxonomy of compromising emanations.}
+  \label{figure:taxonomy}
+\end{figure}
 \subsection{Sensors}
 Given these sources of compromising emanations (accidental or intentional), to
 have a communication channel there must be a receiver. Many kinds of optical
