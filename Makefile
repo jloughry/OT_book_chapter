@@ -4,13 +4,15 @@ latex_cmd = pdflatex
 
 all:: $(target).pdf
 
-$(target).pdf: $(target).tex Makefile
+$(target).pdf: $(target).tex $(graphics) Makefile
 	$(latex_cmd) $(target).tex
 	bibtex $(target)
 	@if (grep "Warning" $(target).blg > /dev/null ) then false; fi
 	@while grep "Rerun to get" $(target).log ; do \
 		$(latex_cmd) $(target) ; \
 	done
+
+graphics = taxonomy.pdf
 
 fix_boldface_for_memoir_class:
 	sed -e 's/{\\\bf /\\\textbf{/g' $(target).bbl
