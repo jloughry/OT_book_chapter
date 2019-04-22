@@ -20,31 +20,34 @@
 \lettrine[lines=3]{T}{he} leakage of information from a system through a
 channel of modulated light is a vulnerability. The operative terms are `leakage',
 `information', `channel', and `modulated light'. The \emph{leakage} might be
-accidental or it might be caused on purpose by an adversary, but it is not
+accidental or it might be caused on purpose by an adversary, but either way it
+is not
 supposed to be there. \emph{Information} can be anything from a single bit to
 large volumes of information; it might be extremely valuable information like
 cryptographic keys. \emph{Channels} in the Shannon sense \cite{Shannon1948}
-have a bandwidth-delay product, and noise; both of these are important to
+have a bandwidth-delay product and noise; both of these are important to
 understand the risk of optical TEMPEST. And finally, \emph{modulated light}
 carries the signal. Light can be modulated in time or in space---here we think of
 light modulated in the time domain. Light modulated in the space domain is an
 \emph{image}; `shoulder surfing' is a real risk but not the one we are
-concerned with here.\footnote{\emph{Shoulder surfing} is the clandestine
+concerned with here.\footnote{\emph{Shoulder surfing} is the clandestine or
+covert
 surveillance of display screens or keyboard activity for the purpose of
 stealing secrets. It might be done visually or through a video camera; it can
-even be done without line-of-sight, by deconvoluting a distorted reflection off
+even be done without line-of-sight, by deconvolving a distorted reflection off
 a shiny object in the optical path
 \cite{Backes2008,Backes2009a,Raguram2011,Jenkins2013a,Xu2013a}.}
 
 Further in the time domain, light can be amplitude-modulated, or
 frequency-modulated, or phase-modulated. Of the three possibilities, amplitude
-modulation (AM) is the most plausible for optical TEMPEST (from a physical
-standpoint) because optical TEMPEST vulnerabilities most often depend on the
-accidental or improvised existence of a modulated---or modulatable---channel,
-and AM is likely the simplest and most straightforward to implement. On-off
+modulation (AM) is the most plausible for optical TEMPEST, from a physical
+standpoint, because optical TEMPEST vulnerabilities most often depend on the
+accidental or improvised existence of a modulated---or modulable---channel,
+and AM is likely the simplest and most straightforward modulation method to
+implement. On-off
 keying (OOK) is the simplest AM method and the most likely to occur
 accidentally; in OOK, light \emph{on} means a binary 0 or 1, and light
-\emph{off} means the other kind. OOK is not self-clocking: the receiver must
+off means the opposite. But OOK is not self-clocking: the receiver must
 know {\it a priori} or be able to figure out the sender's intended \emph{bit
 interval} to decode the signal; there are better \emph{line codes} than OOK
 that a deliberate sender inside the target system may be able to
@@ -52,7 +55,24 @@ use---Manchester coding, for example---but most often the adversary is limited
 to exploiting sources and methods that are already there.
 \subsection{Light Sources}
 Compromising emanations take one of two paths: they may be \emph{conducted} or
-\emph{radiated}. Light sources vulnerable to optical TEMPEST include visual
+\emph{radiated}. (Injection attacks are another matter and will be discussed in
+\S \thechapter.\ref{section:injection_attacks}.) Optical emanations are always
+of the radiated type; light is a species of electromagnetic radiation and
+therefore follows an inverse square law---distance is the defender's most
+valuable ally. Like other electromagnetic radiation, wavelength is important in
+optical TEMPEST. Wavelengths between 350--\SI{700}{\nano\metre} are visible to
+humans; wavelengths shorter than \SI{350}{\nano\metre} or longer than
+\SI{700}{\nano\metre} are not. Visual indicators---such as light emitting
+diodes, or LEDs---obviously must always be at visible wavelengths. But
+invisible wavelengths cannot be completely discounted by optical TEMPEST
+defenders because LED emitters at wavelengths outside the visual spectrum are
+easily available. This brings up again the distinction between intentional and
+accidental sources; accidental sources of optical emanations will almost always
+be at visible wavelenghths, whilst intentional sources sometimes have the
+flexibility to employ invisible ones. (The distinction can be useful when
+forensically attributing intent.)
+
+Light sources vulnerable to optical TEMPEST include visual
 indicators---a subset of which are video displays---and discrete indicators. If
 controlled automatically, indicators are not as useful as if they may be set by
 the adversary.
@@ -76,6 +96,8 @@ a fast response time. Photodiodes, photomultipliers (solid state or otherwise),
 phototransistors, photoresistors, or even some video cameras might be used.
 Still cameras are not suitable.
 \subsection{Induced Emanations}
+
+\label{section:injection_attacks}
 
 \subsection{The clock recovery problem}
 
