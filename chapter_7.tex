@@ -58,24 +58,42 @@ Compromising emanations take one of two paths: they may be \emph{conducted} or
 \emph{radiated}. (Injection attacks are another matter and will be discussed in
 \S \thechapter.\ref{section:injection_attacks}.) Optical emanations are always
 of the radiated type; light is a species of electromagnetic radiation and
-therefore follows an inverse square law---distance is the defender's most
-valuable ally. Like other electromagnetic radiation, wavelength is important in
-optical TEMPEST. Wavelengths between 350--\SI{700}{\nano\metre} are visible to
+therefore follows an inverse square law---distance is the TEMPEST defender's
+most valuable ally. Like with other electromagnetic radiation, wavelength
+(colour) is important in optical TEMPEST. Wavelengths in the range of
+approximately 350--\SI{700}{\nano\metre} are visible to
 humans; wavelengths shorter than \SI{350}{\nano\metre} or longer than
 \SI{700}{\nano\metre} are not. Visual indicators---such as light emitting
-diodes, or LEDs---obviously must always be at visible wavelengths. But
+diodes, or LEDs---obviously must always radiate at visible wavelengths. But
 invisible wavelengths cannot be completely discounted by optical TEMPEST
 defenders because LED emitters at wavelengths outside the visual spectrum are
 easily available. This brings up again the distinction between intentional and
 accidental sources; accidental sources of optical emanations will almost always
-be at visible wavelenghths, whilst intentional sources sometimes have the
-flexibility to employ invisible ones. (The distinction can be useful when
-forensically attributing intent.)
+be at visible wavelengths, whilst intentional sources may have the additional
+flexibility to be able to employ invisible ones. This distinction can be useful
+when forensically attributing intent.
 
-Light sources vulnerable to optical TEMPEST include visual
-indicators---a subset of which are video displays---and discrete indicators. If
-controlled automatically, indicators are not as useful as if they may be set by
-the adversary.
+Aside from wavelength, virtually the only other variable available to the
+attacker is the coding method: simple or more complex.\footnote{In addition to
+the advantage of invisible wavelengths, an attacker capable of arranging for
+intentional optical emanations may also be able to specify a higher intensity
+source than status indicators usually are.} Accidental sources are almost
+always single sources and almost always use OOK; an intentional attacker may be
+able to co-ordinate multiple sources---either for improved reliability or
+increased bandwidth---and may additionally have the flexibility to choose
+self-clocking line codes such as Manchester encoding to simplify the clock
+recovery problem. For accidental sources, or when an intentional source is
+precluded from using self-clocking line codes, the problem of inferring the
+unit interval and maintaining receiver synchronisation with the sender is
+complicated. However, it is not impossible \cite[\S 8.2]{Loughry2002a}.
+
+Light sources vulnerable to optical TEMPEST include visual indicators---a
+subset of which are video displays---and discrete indicators. If controlled
+automatically, indicators are not as useful to an attacker as if they may be
+set by the adversary. There are other sources to consider, however; infrared
+(IR) illumination is one. Some smart light bulbs, such as the LIFX+ series,
+contain an additional infrared (IR) emitter that is independently controllable
+and has been employed as an invisible communication channel \cite{Maiti2018b}.
 
 Figure \ref{figure:taxonomy} shows the taxonomy of optical TEMPEST in the
 larger context of vulnerabilities due to \emph{compromising
