@@ -2,6 +2,8 @@ target = chapter_7
 
 latex_cmd = pdflatex
 
+graphics = taxonomy.pdf
+
 all:: $(target).pdf
 
 $(target).pdf: $(target).tex $(graphics) Makefile
@@ -11,8 +13,6 @@ $(target).pdf: $(target).tex $(graphics) Makefile
 	@while grep "Rerun to get" $(target).log ; do \
 		$(latex_cmd) $(target) ; \
 	done
-
-graphics = taxonomy.pdf
 
 fix_boldface_for_memoir_class:
 	sed -e 's/{\\\bf /\\\textbf{/g' $(target).bbl
