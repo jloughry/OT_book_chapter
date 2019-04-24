@@ -1,5 +1,6 @@
-% \documentclass[a4paper,twoside]{memoir}
-\documentclass[a4paper,twoside,oldfontcommands]{memoir}
+% \documentclass[a4paper,twoside,oldfontcommands]{memoir}
+\documentclass[a4paper,twoside,11pt]{book}
+\usepackage[nomarginpar,margin=2.5cm]{geometry}
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{siunitx}
@@ -7,6 +8,7 @@
 \usepackage{har2nat} % har2nat must be loaded after natbib.
 \usepackage{GoudyIn,lettrine}
 \renewcommand\LettrineFontHook{\GoudyInfamily}
+\usepackage{verbatim} % for the comment environment
 \newcommand{\URL}[1]{$\langle$\url{#1}$\rangle$}
 \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
 % This is the chapter titled `Optical TEMPEST' in Ireneusz Kubiak's new book.
@@ -24,7 +26,7 @@ accidental or it might be caused on purpose by an adversary, but either way it
 is not
 supposed to be there. \emph{Information} can be anything from a single bit to
 large volumes of information; it might be extremely valuable information like
-cryptographic keys. \emph{Channels} in the Shannon sense \cite{Shannon1948}
+cryptographic keys. \emph{Channels}, in the Shannon sense \cite{Shannon1948}
 have a bandwidth-delay product and noise; both of these are important to
 understand the risk of optical TEMPEST. And finally, \emph{modulated light}
 carries the signal. Light can be modulated in time or in space---here we think of
@@ -132,12 +134,14 @@ least infrared (wavelengths longer than \SI{700}{\nano\metre}) because of the
 ubiquitousness of light emitting diode (LED) sources in that range and their
 convenient invisibility to humans.
 
+\begin{comment}
 \sidebar{\centerline{\textbf{How dangerous?}}\medskip
 \textbf{Class I} optical emanations are correlated only minimally with the state
 of a device; they tell if it is on or off. \textbf{Class II} emanations leak
 information about the activity level of a device---is it busy or idle?
 \textbf{Class III} optical emanations are correlated with the contents of data,
 and are extremely hazardous.}
+\end{comment}
 
 Cite \cite{Allain2019}.
 
@@ -156,12 +160,14 @@ everything related to emanations other than RF is redacted
 \subsubsection{Electromagnetic}
 Field telephones in WWI; \emph{funkspiel} in WWII; electromechanical cypher
 machines in West Berlin. (This topic is covered well elsewhere in the book.)
+\begin{comment}
 \sidebar{\centerline{\textbf{Video Cameras}}\medskip
 It is tempting to think of using video cameras to capture an entire rack of LED
 indicators at once, but that won't work. The reason is because video cameras
 have a relatively low frame rate---usually 30--240 frames per
 second---and this is not fast enough to capture the transitions we're
 interested in.}
+\end{comment}
 \subsection{TEMPEST}
 The protection of information from remote eavesdropping; air gaps; control
 zones; protected distribution systems (PDS)\footnote{Visibility, stories of
