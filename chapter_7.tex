@@ -4,7 +4,7 @@
 \usepackage{url}
 \usepackage{siunitx}
 \usepackage{natbib}
-\usepackage{har2nat}
+\usepackage{har2nat} % har2nat must be loaded after natbib.
 \usepackage{GoudyIn,lettrine}
 \renewcommand\LettrineFontHook{\GoudyInfamily}
 \newcommand{\URL}[1]{$\langle$\url{#1}$\rangle$}
@@ -276,6 +276,6 @@ For the \SI{33}{\pico\second} interval between those two points, the light does
 not exist in this universe.
 
 Bell's Inequality \cite{Bell1964}.
-\bibliographystyle{agsm}
+\bibliographystyle{./agsmitalic} % This is my twiddled version of agsm.bst.
 \bibliography{consolidated_bibtex_file}
 \end{document}
