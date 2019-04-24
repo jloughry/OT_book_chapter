@@ -46,16 +46,16 @@ accidental or improvised existence of a modulated---or modulable---channel,
 and AM is likely the simplest and most straightforward modulation method to
 implement. On-off
 keying (OOK) is the simplest AM method and the most likely to occur
-accidentally; in OOK, light \emph{on} means a binary 0 or 1, and light
+accidentally; in OOK, the light being on means a binary 0 or 1, and light
 off means the opposite. But OOK is not self-clocking: the receiver must
-know {\it a priori} or be able to figure out the sender's intended \emph{bit
-interval} to decode the signal; there are better \emph{line codes} than OOK
+know {\it a priori} or be able to figure out the sender's intended bit
+interval to decode the signal; there are better line codes than OOK
 that a deliberate sender inside the target system may be able to
 use---Manchester coding, for example---but most often the adversary is limited
 to exploiting sources and methods that are already there.
 \subsection{Light Sources}
-Compromising emanations take one of two paths: they may be \emph{conducted} or
-\emph{radiated}. (Injection attacks are another matter and will be discussed in
+Compromising emanations take one of two paths: they may be conducted or
+radiated. (Injection attacks are another matter and will be discussed in
 \S \thechapter.\ref{section:injection_attacks}.) Optical emanations are always
 of the radiated type; light is a species of electromagnetic radiation and
 therefore follows an inverse square law---distance is the TEMPEST defender's
@@ -159,7 +159,7 @@ machines in West Berlin. (This topic is covered well elsewhere in the book.)
 \sidebar{\centerline{\textbf{Video Cameras}}\medskip
 It is tempting to think of using video cameras to capture an entire rack of LED
 indicators at once, but that won't work. The reason is because video cameras
-have a relatively low \emph{frame rate}---usually 30--240 frames per
+have a relatively low frame rate---usually 30--240 frames per
 second---and this is not fast enough to capture the transitions we're
 interested in.}
 \subsection{TEMPEST}
@@ -223,7 +223,7 @@ photodiodes, both in the forward-biased (photovoltaic) and reverse-biased
 
 Would an unmodified LED, with leads splayed out, act as a WiFi powered
 optical bug? Could a \SI{5}{\giga\hertz} WiFi illumination power it in
-\emph{reverse bias} photoconductive mode to turn it into an optical RF
+reverse bias photoconductive mode to turn it into an optical RF
 modulator? It's a nonlinear junction (diode) detector already---but can
 incident \emph{optical} radiation modulate through the diode the reflection
 from the leads of the ambient microwave interrogation carrier?
