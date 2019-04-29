@@ -115,7 +115,45 @@ have a communication channel there must be a receiver. Many kinds of optical
 sensors will suffice, but what is needed particularly is an optical sensor with
 a fast response time. Photodiodes, photomultipliers (solid state or otherwise),
 phototransistors, photoresistors, or even some video cameras might be used.
-Still cameras are not suitable.
+Still cameras are not suitable, because this is a penomenon integrated over
+$t$.
+
+There are two kinds of sensors: imaging and non-imaging. Imaging sensors have
+some limited application in optical TEMPEST; they may capture multiple point
+sources simultanously, whilst co-ordinating those measurements in time, which
+can be useful in some situations, such as imaging an entire rack of LED
+indicators at once. But to do this, the imaging detector must have a very high
+frame rate, and most video cameras do not. There exist high-speed video cameras
+but there is usually a frame-rate--resolution trade-off, as well as a
+frame-rate--sensitivity trade-off, so either lines of resolution or light
+sensitivity, or both, must be sacrificed for a sufficiently high frame rate.
+The minimum frame rate needed is ideally at least the bit interval of a serial
+data transmission, per Shannon's theorem.
+
+Non-imaging detectors are more practicable. Non-imaging detectors may have a
+direct line of sight to the source being observed, or not. If line-of-sight is
+not possible, then of course the signal-to-noise ratio may be poor, but worse,
+multiple sources, if they are active within the field of view of the detector,
+may become intermingled. The optical signals combine additively. If that
+happens, the situation is not hopeless, as was demonstrated, at least in
+sumulation, in \cite[\S 8]{Loughry2002a}. There it was shown that multiple
+uncorrelated sources, even having the same bit interval, could be separated
+unambigously despite the bit interval not being known {\it a priori}. As soon
+as the line code can be determined with reasonable confidence, then the bit
+interval can be guessed with high probability, and this is independent of the
+individual bit intervals of $n$ uncorrelated signals. The time resolution of
+the sensor, though, must be high, and low signal levels or a noisy detector
+will make the problem more difficult. A special case of non-line-of-sight
+optical TEMPEST is fibre-optic media, either passive (eavesdropping via a dark
+fibre) or active (observation of the un-capped radiation from a fibre-optic
+transmitter) but it reduces to the same two problems as line-of-sight or
+non-line-of-sight optical TEMPEST: if multiple signals additively mixed, they
+can be separated.
+
+Optical detectors all tend to be one of photoconductive, photoresistive, or
+photoelectronic. Photoconductive detectors include photodiodes and
+phototransistors.
+
 \subsection{Induced Emanations}
 
 \label{section:injection_attacks}
