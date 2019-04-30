@@ -150,9 +150,32 @@ transmitter) but it reduces to the same two problems as line-of-sight or
 non-line-of-sight optical TEMPEST: if multiple signals additively mixed, they
 can be separated.
 
-Optical detectors all tend to be one of photoconductive, photoresistive, or
+Optical detectors tend to be one of photoconductive, photoresistive, or
 photoelectronic. Photoconductive detectors include photodiodes and
-phototransistors.
+phototransistors; photodiodes generally are faster and more sensitive than
+phototransistors, especially when operated in reverse-biased mode. Use of
+photoresistors as optical TEMPEST detectors is rare, although there is one
+recent example in the literature \cite{Barisani2009a}. The most sensitive
+detectors---useful at long distances when the number of photons that can be
+gathered from the target is low---are photomultipliers, either vacuum state or
+solid state (avalanche photodiodes). One of the few vacuum state devices still
+in use in 2019, photomultiplier tubes are superior in sensitivity, dynamic
+range, and sometimes even response speed to photodiodes, and are ideal
+detectors for optical TEMPEST. Their only drawbacks are cost, size, fragility,
+and the requirement for special high voltage power supplies. Photomultiplier
+tubes, however, have the advantage of not requiring a separate transimpedance
+amplier, which photodiodes do. Transimpedance amplifiers tend to have a severe
+gain--bandwidth tradeoff; at high gains (a few tens of \si{\deci\bel}), the
+bandwidth may be only a few \si{\kilo\hertz}. In contrast, typical
+photomultiplier tubes offer direct amplification of \SI{100}{\deci\bel}, and
+when the optical flux is low, and the need for response speed high, a
+photomultiplier tube cannot be beat.
+
+Additional collection optics, {\it i.e.}, telescope or fibre optics, are useful
+for increasing the light-gathering capability of the detector; if light levels
+from the source are low, external optics will improve the sensitivity of the
+detector by the square of the aperture of the optics, divided by the area of
+the detector (typically on the order of \SI{1}{\square\milli\metre}).
 
 \subsection{Induced Emanations}
 
