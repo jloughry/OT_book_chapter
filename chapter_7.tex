@@ -2,6 +2,7 @@
 \documentclass[a4paper,twoside,11pt]{book}
 \usepackage[nomarginpar,margin=2.5cm]{geometry}
 \usepackage{graphicx}
+% \usepackage{showframe} % for testing
 \usepackage{url}
 \usepackage{siunitx}
 \usepackage{natbib}
@@ -106,7 +107,8 @@ state of the target system). We shall now go through the taxonomy in detail.
 \begin{figure}[htp]
   \centering
   \includegraphics[width=\textwidth]{taxonomy.pdf}
-  \caption{Taxonomy of compromising emanations.}
+  \caption{Taxonomy of optical TEMPEST in the larger context of compromising
+    emanations.}
   \label{figure:taxonomy}
 \end{figure}
 \subsection{Sensors}
@@ -147,8 +149,8 @@ will make the problem more difficult. A special case of non-line-of-sight
 optical TEMPEST is fibre-optic media, either passive (eavesdropping via a dark
 fibre) or active (observation of the un-capped radiation from a fibre-optic
 transmitter) but it reduces to the same two problems as line-of-sight or
-non-line-of-sight optical TEMPEST: if multiple signals additively mixed, they
-can be separated.
+non-line-of-sight optical TEMPEST: if multiple signals are additively mixed,
+they can be separated.
 
 Optical detectors tend to be one of photoconductive, photoresistive, or
 photoelectronic. Photoconductive detectors include photodiodes and
@@ -175,7 +177,14 @@ Additional collection optics, {\it i.e.}, telescope or fibre optics, are useful
 for increasing the light-gathering capability of the detector; if light levels
 from the source are low, external optics will improve the sensitivity of the
 detector by the square of the aperture of the optics, divided by the area of
-the detector (typically on the order of \SI{1}{\square\milli\metre}).
+the detector (typically on the order of \SI{1}{\square\milli\metre}). While the
+aperture of the collecting optics determines the amount of light collected, the
+focal length of the eyepiece (if using a conventional telescope) determines the
+field of view. External optics can make all the difference between a usable
+signal level and impossibly challenging conditions, but pointing stability is
+crucial at high magification.
+
+zzzzzzzzz
 
 \subsection{Induced Emanations}
 
