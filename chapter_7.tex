@@ -20,26 +20,30 @@
 \setcounter{page}{262} % Page 263 will be the first page of this file.
 \thispagestyle{empty}
 \chapter{Optical TEMPEST}
-\lettrine[lines=3]{T}{he} leakage of information from a system through a
-channel of modulated light is a vulnerability. The operative terms are `leakage',
+\lettrine[lines=3]{T}{he} leakage of information out from a system through a
+channel of modulated light is a vulnerability. The operative terms here are
+`leakage',
 `information', `channel', and `modulated light'. The \emph{leakage} might be
-accidental or it might be caused on purpose by an adversary, but either way it
+accidental or it may be caused on purpose by an adversary, but either way it
 is not
 supposed to be there. \emph{Information} can be anything from a single bit to
-large volumes of information; it might be extremely valuable information like
+large volumes of information; it might be extremely small and high-value
+information like
 cryptographic keys. \emph{Channels}, in the Shannon sense \cite{Shannon1948}
 have a bandwidth-delay product and noise; both of these are important to
-understand the risk of optical TEMPEST. And finally, \emph{modulated light}
-carries the signal. Light can be modulated in time or in space---here we think of
+understanding the risk of optical TEMPEST. And finally, \emph{modulated light}
+carries the signal. Light can be modulated in time or in space---in this
+chapter we think of
 light modulated in the time domain. Light modulated in the space domain is an
 \emph{image}; `shoulder surfing' is a real risk but not the one we are
-concerned with here.\footnote{\emph{Shoulder surfing} is the clandestine or
-covert
+concerned with here.\footnote{Shoulder surfing is the clandestine or covert
 surveillance of display screens or keyboard activity for the purpose of
-stealing secrets. It might be done visually or through a video camera; it can
+stealing secrets. It might be done visually or my means of a camera; it can
 even be done without line-of-sight, by deconvolving a distorted reflection off
 a shiny object in the optical path
-\cite{Backes2008,Backes2009a,Raguram2011,Jenkins2013a,Xu2013a}.}
+\cite{Backes2008,Backes2009a,Raguram2011,Jenkins2013a,Xu2013a}. Optical
+\emph{time-domain} eavesdropping on video displays \cite{Kuhn2002} is discussed
+in \S \ref{section:Markus}.}
 
 Further in the time domain, light can be amplitude-modulated, or
 frequency-modulated, or phase-modulated. Of the three possibilities, amplitude
@@ -98,12 +102,9 @@ set by the adversary. There are other sources to consider, however; infrared
 contain an additional infrared (IR) emitter that is independently controllable
 and has been employed as an invisible communication channel \cite{Maiti2018b}.
 
-Figure \ref{figure:taxonomy} shows the taxonomy of optical TEMPEST in the
-larger context of vulnerabilities due to \emph{compromising
-emanations}---exploitable leakage of measurable physical phenomena out of a
-system that can be interpreted by an adversary to gain information about the
-internal state of the system (or, in some rare cases, to affect the internal
-state of the target system). We shall now go through the taxonomy in detail.
+Intentional sources of optical TEMPEST may have the flexibility to choose their
+own line codes and modulation. zzzzzzzzzz
+
 \begin{figure}[htp]
   \centering
   \includegraphics[width=\textwidth]{taxonomy.pdf}
@@ -111,6 +112,13 @@ state of the target system). We shall now go through the taxonomy in detail.
     emanations.}
   \label{figure:taxonomy}
 \end{figure}
+Figure \ref{figure:taxonomy} shows the taxonomy of optical TEMPEST in the
+larger context of vulnerabilities due to \emph{compromising
+emanations}---exploitable leakage of measurable physical phenomena out of a
+system that can be interpreted by an adversary to gain information about the
+internal state of the system (or, in some rare cases, to affect the internal
+state of the target system). We shall now go through the taxonomy in detail.
+
 \subsection{Sensors}
 Given these sources of compromising emanations (accidental or intentional), to
 have a communication channel there must be a receiver. Many kinds of optical
@@ -183,8 +191,6 @@ focal length of the eyepiece (if using a conventional telescope) determines the
 field of view. External optics can make all the difference between a usable
 signal level and impossibly challenging conditions, but pointing stability is
 crucial at high magification.
-
-zzzzzzzzz
 
 \subsection{Induced Emanations}
 
