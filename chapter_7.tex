@@ -7,6 +7,7 @@
 \usepackage{siunitx}
 \usepackage{natbib}
 \usepackage{har2nat} % har2nat must be loaded after natbib.
+\usepackage{bigstrut} % for row spacing in tables
 \usepackage{GoudyIn,lettrine}
 \renewcommand\LettrineFontHook{\GoudyInfamily}
 \usepackage{verbatim} % for the comment environment
@@ -45,21 +46,93 @@ a shiny object in the optical path
 \emph{time-domain} eavesdropping on video displays \cite{Kuhn2002} is discussed
 in \S \ref{section:Markus}.}
 
-Further in the time domain, light can be amplitude-modulated, or
-frequency-modulated, or phase-modulated. Of the three possibilities, amplitude
-modulation (AM) is the most plausible for optical TEMPEST, from a physical
-standpoint, because optical TEMPEST vulnerabilities most often depend on the
-accidental or improvised existence of a modulated---or modulable---channel,
-and AM is likely the simplest and most straightforward modulation method to
-implement. On-off
-keying (OOK) is the simplest AM method and the most likely to occur
-accidentally; in OOK, the light being on means a binary 0 or 1, and light
+Further in the time domain, light can be amplitude-modulated,
+frequency-modulated, phase-modulated, or polarisation-modulated. Amplitude
+modulation (AM) is the only one that makes any kind of practicable sense for
+optical TEMPEST purposes. The reason for this is because the modulation
+capability, for anything other than amplitude modulation, simply is not there;
+external hardware such as an electro-optic modulator is needed for those
+methods. Amplitude modulation, on the other hand, is easy with the resources
+available (and sometimes even happens accidentally). Optical TEMPEST
+vulnerabilities most often depend on the accidental or improvised existence of
+a modulated---or modulable---channel, and AM is likely the simplest and most
+straightforward modulation method to implement.
+
+On-off keying (OOK) is the simplest AM method and the most likely to occur
+accidentally, or to be achievable by an opportunistic adversary; in OOK, a
+light being on means a binary 0 or 1, and light
 off means the opposite. But OOK is not self-clocking: the receiver must
-know {\it a priori} or be able to figure out the sender's intended bit
-interval to decode the signal; there are better line codes than OOK
-that a deliberate sender inside the target system may be able to
-use---Manchester coding, for example---but most often the adversary is limited
-to exploiting sources and methods that are already there.
+know {\it a priori}---or be able to discover---the sender's intended bit
+interval to decode the signal; if the sender is able, there are better line
+codes than OOK---Machester coding, for example---that a deliberate sender
+inside the target system may be able to use. But more often the adversary is
+limited to exploiting sources and methods that are already there.
+
+We shall discuss every aspect of optical TEMPEST in practice, from sources of
+information and sources of radiation, through receivers, optics, and coding.
+The number of conceivable vulnerabilities in this class is limited only by the
+imagination of attackers, and even includes a few naturally occurring channels.
+Follow along as we map out the landscape, beginning with the idea of
+compromising emanations.
+\section{Compromising Emanations}
+TEMPEST is concerned with the exploitation and control of compromising
+emanations. These are unintended leakage of signals---interpreted here in the
+widest possible sense, as anything at all that can be used by a clever
+adversary---that carry information about what the target system is doing. Some
+of the earliest research published about optical TEMPEST divided up the
+vulinerability by the severity of the problem (Table \ref{table:class_III});
+Class III optical emanations are what is usually known as an optical TEMPEST
+vulnerability.
+
+\begin{table}[ht]
+\caption{The original classification system for risk level of optical TEMPEST
+radiation, reproduced from \citeauthor{Loughry2002a}, \citeyear{Loughry2002a}.}
+\medskip
+\label{table:class_III}
+\centering
+\begin{tabular}{|l|l|c|}
+\hline
+\multicolumn{1}{|c|}{Type} & \multicolumn{1}{|c|}{Correlated to}
+  & Associated Risk Level \bigstrut \\
+\hline
+\renewcommand{\arraystretch}{1}
+Class I & State of the device & Low \\
+Class II & Activity level of the device & Medium \\
+Class III & Content (data) & High \\
+\hline
+\end{tabular}
+\end{table}
+
+Leakage from a system may be conducted or radiated; conducted emanations are
+usually thought of as power supply vulnerabilities, but may also be conducted
+through less obvious media, such as water pipes or structural materials
+comprising a building. Radiated emanations include radio frequency (RF) or
+shorter wavelength electromagnetic waves, up to and including light. TEMPEST is
+thought to be a code name for suppression, masking, or control of RF
+compromising emanations; these are known to originate from---at least---cables
+(communication or video), video displays (CRT or flat screen), and printers
+\cite{vanEck1985,Smulders1990,Kuhn2002,Grzesiak2010a}. Acoustic
+vibrations---conducted or radiated---have been observed and successfully
+exploited from keyboards, video displays, printers, and even computer
+motherboards \cite{Wright1987,Asonov2004,Zhuang2005,Berger2006,Backes2010,
+Genkin2013,Genkin2018a,Kubiak2018f}.
+
+\begin{figure}[htp]
+  \centering
+  \includegraphics[width=\textwidth]{taxonomy.pdf}
+  \caption{Taxonomy of optical TEMPEST in the larger context of compromising
+    emanations.}
+  \label{figure:taxonomy}
+\end{figure}
+
+
+
+
+
+
+
+
+
 \subsection{Light Sources}
 Compromising emanations take one of two paths: they may be conducted or
 radiated. (Injection attacks are another matter and will be discussed in
@@ -105,13 +178,6 @@ and has been employed as an invisible communication channel \cite{Maiti2018b}.
 Intentional sources of optical TEMPEST may have the flexibility to choose their
 own line codes and modulation. zzzzzzzzzz
 
-\begin{figure}[htp]
-  \centering
-  \includegraphics[width=\textwidth]{taxonomy.pdf}
-  \caption{Taxonomy of optical TEMPEST in the larger context of compromising
-    emanations.}
-  \label{figure:taxonomy}
-\end{figure}
 Figure \ref{figure:taxonomy} shows the taxonomy of optical TEMPEST in the
 larger context of vulnerabilities due to \emph{compromising
 emanations}---exploitable leakage of measurable physical phenomena out of a
