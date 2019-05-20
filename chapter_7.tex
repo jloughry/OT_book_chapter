@@ -64,7 +64,7 @@ light being on means a binary 0 or 1, and light
 off means the opposite. But OOK is not self-clocking: the receiver must
 know {\it a priori}---or be able to discover---the sender's intended bit
 interval to decode the signal; if the sender is able, there are better line
-codes than OOK---Machester coding, for example---that a deliberate sender
+codes than OOK---Manchester coding, for example---that a deliberate sender
 inside the target system may be able to use. But more often the adversary is
 limited to exploiting sources and methods that are already there.
 
@@ -74,13 +74,19 @@ The number of conceivable vulnerabilities in this class is limited only by the
 imagination of attackers, and even includes a few naturally occurring channels.
 Follow along as we map out the landscape, beginning with the idea of
 compromising emanations.
+Figure \ref{figure:taxonomy} shows the taxonomy of optical TEMPEST in the
+larger context of vulnerabilities due to \emph{compromising
+emanations}---exploitable leakage of measurable physical phenomena out of a
+system that can be interpreted by an adversary to gain information about the
+internal state of the system (or, in some rare cases, to affect the internal
+state of the target system). We shall now go through the taxonomy in detail.
 \section{Compromising Emanations}
 TEMPEST is concerned with the exploitation and control of compromising
 emanations. These are unintended leakage of signals---interpreted here in the
 widest possible sense, as anything at all that can be used by a clever
 adversary---that carry information about what the target system is doing. Some
 of the earliest research published about optical TEMPEST divided up the
-vulinerability by the severity of the problem (Table \ref{table:class_III});
+vulnerability by the severity of the problem (Table \ref{table:class_III});
 Class III optical emanations are what is usually known as an optical TEMPEST
 vulnerability.
 
@@ -105,13 +111,16 @@ Class III & Content (data) & High \\
 
 Leakage from a system may be conducted or radiated; conducted emanations are
 usually thought of as power supply vulnerabilities, but may also be conducted
-through less obvious media, such as water pipes or structural materials
+through less obvious media, such as shared ground connections or structural
+materials (even water pipes)
 comprising a building. Radiated emanations include radio frequency (RF) or
-shorter wavelength electromagnetic waves, up to and including light. TEMPEST is
-thought to be a code name for suppression, masking, or control of RF
+shorter wavelength electromagnetic waves, up to and including light. TEMPEST
+itself is
+thought to be a code name for the suppression, masking, or control of RF (and
+probably also acoustical)
 compromising emanations; these are known to originate from---at least---cables
 (communication or video), video displays (CRT or flat screen), and printers
-\cite{vanEck1985,Smulders1990,Kuhn2002,Grzesiak2010a}. Acoustic
+\cite{NSAtempest2007,vanEck1985,Smulders1990,Kuhn2002,Grzesiak2010a}. Acoustic
 vibrations---conducted or radiated---have been observed and successfully
 exploited from keyboards, video displays, printers, and even computer
 motherboards \cite{Wright1987,Asonov2004,Zhuang2005,Berger2006,Backes2010,
@@ -125,16 +134,9 @@ Genkin2013,Genkin2018a,Kubiak2018f}.
   \label{figure:taxonomy}
 \end{figure}
 
-
-
-
-
-
-
-
-
 \subsection{Light Sources}
-Compromising emanations take one of two paths: they may be conducted or
+Compromising emanations necessarily take one of two paths from source to
+receiver: they may be conducted or
 radiated. (Injection attacks are another matter and will be discussed in
 \S \thechapter.\ref{section:injection_attacks}.) Optical emanations are always
 of the radiated type; light is a species of electromagnetic radiation and
@@ -147,7 +149,7 @@ humans; wavelengths shorter than \SI{350}{\nano\metre} or longer than
 diodes, or LEDs---obviously must always radiate at visible wavelengths. But
 invisible wavelengths cannot be completely discounted by optical TEMPEST
 defenders because LED emitters at wavelengths outside the visual spectrum are
-easily available. This brings up again the distinction between intentional and
+easily sourced. This brings up again the distinction between intentional and
 accidental sources; accidental sources of optical emanations will almost always
 be at visible wavelengths, whilst intentional sources may have the additional
 flexibility to be able to employ invisible ones. This distinction can be useful
@@ -158,32 +160,65 @@ attacker is the coding method: simple or more complex.\footnote{In addition to
 the advantage of invisible wavelengths, an attacker capable of arranging for
 intentional optical emanations may also be able to specify a higher intensity
 source than status indicators usually are.} Accidental sources are almost
-always single sources and almost always use OOK; an intentional attacker may be
-able to co-ordinate multiple sources---either for improved reliability or
+always single sources and almost always employ OOK; an intentional attacker may
+be able to co-ordinate multiple sources---either for improved reliability or
 increased bandwidth---and may additionally have the flexibility to choose
 self-clocking line codes such as Manchester encoding to simplify the clock
 recovery problem. For accidental sources, or when an intentional source is
 precluded from using self-clocking line codes, the problem of inferring the
 unit interval and maintaining receiver synchronisation with the sender is
-complicated. However, it is not impossible \cite[\S 8.2]{Loughry2002a}.
+complicated. However, it is not impossible, as previously demonstrated
+\cite[\S 8.2]{Loughry2002a}.
 
 Light sources vulnerable to optical TEMPEST include visual indicators---a
-subset of which are video displays---and discrete indicators. If controlled
-automatically, indicators are not as useful to an attacker as if they may be
+subset of which are video displays---and discrete indicators. Indicators that
+are controlled automatically are not as useful to an attacker as if they may be
 set by the adversary. There are other sources to consider, however; infrared
 (IR) illumination is one. Some smart light bulbs, such as the LIFX+ series,
 contain an additional infrared (IR) emitter that is independently controllable
 and has been employed as an invisible communication channel \cite{Maiti2018b}.
 
-Intentional sources of optical TEMPEST may have the flexibility to choose their
-own line codes and modulation. zzzzzzzzzz
+\subsection{Area Sources}
 
-Figure \ref{figure:taxonomy} shows the taxonomy of optical TEMPEST in the
-larger context of vulnerabilities due to \emph{compromising
-emanations}---exploitable leakage of measurable physical phenomena out of a
-system that can be interpreted by an adversary to gain information about the
-internal state of the system (or, in some rare cases, to affect the internal
-state of the target system). We shall now go through the taxonomy in detail.
+Area sources include illumination and video displays. Video displays based on
+cathode ray tube (CRT) technology used to be most prevalent but have largely
+been replaced by flat-screen technologies including plasma, liquid crystal
+displays (LCD), and light emitting diode (LED) arrays. From an optical TEMPEST
+perspective, all have importantly different characteristics relating to speed.
+CRT and plasma displays are both based on phosphor excitation; in the case of a
+CRT, by a scanning electron beam, and for plasma displays, by a high voltage
+glow discharge. In either case, the decay curve of the phosphor is what makes
+an optical TEMPEST attack possible or not. Some phosphor formulations---those
+typically used for radar displays---have a very slow decay; phosphors used in
+video displays have a fast decay. What is needed for a successful optical
+TEMPEST attack against a CRT or plasma display is a fast-decay phosphor, or one
+with a `step' early in the decay curve, that is faster than the sweep of the
+electron beam across one line of the video display. This is what
+\citeauthor{Kuhn2002} (\citeyear{Kuhn2002} was able to exploit even though
+earlier researchers had looked for such a signal and not found it. Plasma
+displays, by their nature, need not be `swept' by a regular raster pattern as
+are CRT displays, but oftentimes they are, for compatibility with existing
+video signal transmission standards. It is the \emph{video} signal itself that
+is exploitable, not individual pixels. This is important for understanding the
+vulnerability of other two major flat screen display technologies: LCD and LED.
+
+The most common display technology today is LCD. Both LCD and LED arrays need
+not be raster-scanned the way CRT displays were; the newer technologies are
+inherently pixel-oriented and could be directly addressed (as they often are in
+very small devices, like pocket calculators) without the added complexity of
+raster scanning. But for backwards-compatibility reasons, it is often more
+cost-effective to add a raster-scanning interface layer that makes the new
+display work like the old CRT displays, on a video signal. Interestingly,
+\citeauthor{Kuhn2002} (\citeyear{Kuhn2002}) found that it was this extra
+compatbility interface layer that was the source of most of the exploitable
+TEMPEST radiation, in the RF region. If it wasn't the raster-scanning emulation
+layer, then it was poorly-shielded cables between the computer and the display,
+or inside the display, that were the richest source of RM emanations. This
+tendency has continued to the present day.
+
+\subsection{Point Sources}
+
+zzzzzzzzz
 
 \subsection{Sensors}
 Given these sources of compromising emanations (accidental or intentional), to
@@ -191,12 +226,12 @@ have a communication channel there must be a receiver. Many kinds of optical
 sensors will suffice, but what is needed particularly is an optical sensor with
 a fast response time. Photodiodes, photomultipliers (solid state or otherwise),
 phototransistors, photoresistors, or even some video cameras might be used.
-Still cameras are not suitable, because this is a penomenon integrated over
+Still cameras are not suitable, because this is a phenomenon integrated over
 $t$.
 
 There are two kinds of sensors: imaging and non-imaging. Imaging sensors have
 some limited application in optical TEMPEST; they may capture multiple point
-sources simultanously, whilst co-ordinating those measurements in time, which
+sources simultaneously, whilst co-ordinating those measurements in time, which
 can be useful in some situations, such as imaging an entire rack of LED
 indicators at once. But to do this, the imaging detector must have a very high
 frame rate, and most video cameras do not. There exist high-speed video cameras
@@ -212,9 +247,9 @@ not possible, then of course the signal-to-noise ratio may be poor, but worse,
 multiple sources, if they are active within the field of view of the detector,
 may become intermingled. The optical signals combine additively. If that
 happens, the situation is not hopeless, as was demonstrated, at least in
-sumulation, in \cite[\S 8]{Loughry2002a}. There it was shown that multiple
+simulation, in \cite[\S 8]{Loughry2002a}. There it was shown that multiple
 uncorrelated sources, even having the same bit interval, could be separated
-unambigously despite the bit interval not being known {\it a priori}. As soon
+unambiguously despite the bit interval not being known {\it a priori}. As soon
 as the line code can be determined with reasonable confidence, then the bit
 interval can be guessed with high probability, and this is independent of the
 individual bit intervals of $n$ uncorrelated signals. The time resolution of
@@ -240,7 +275,7 @@ range, and sometimes even response speed to photodiodes, and are ideal
 detectors for optical TEMPEST. Their only drawbacks are cost, size, fragility,
 and the requirement for special high voltage power supplies. Photomultiplier
 tubes, however, have the advantage of not requiring a separate transimpedance
-amplier, which photodiodes do. Transimpedance amplifiers tend to have a severe
+amplifier, which photodiodes do. Transimpedance amplifiers tend to have a severe
 gain--bandwidth tradeoff; at high gains (a few tens of \si{\deci\bel}), the
 bandwidth may be only a few \si{\kilo\hertz}. In contrast, typical
 photomultiplier tubes offer direct amplification of \SI{100}{\deci\bel}, and
@@ -256,7 +291,7 @@ aperture of the collecting optics determines the amount of light collected, the
 focal length of the eyepiece (if using a conventional telescope) determines the
 field of view. External optics can make all the difference between a usable
 signal level and impossibly challenging conditions, but pointing stability is
-crucial at high magification.
+crucial at high magnification.
 
 \subsection{Induced Emanations}
 
