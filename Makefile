@@ -31,7 +31,7 @@ clean::
 	rm -fv *.log *.blg *.aux
 
 spell::
-	detex $(target).tex | aspell --lang=EN_GB list | sort | uniq
+	detex $(target).tex | aspell --lang=EN_GB list | sort --ignore-case | uniq -i
 
 allclean: clean
 	rm -fv *.bbl $(target).pdf
