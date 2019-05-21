@@ -133,7 +133,7 @@ be limited to RF and acoustical emanations, was based largely on the idea of a
 an inverse square law---shield them as much as possible, but then employ fences
 and guards to keep unauthorised receivers a safe distance away \cite[\S
 17.4.2]{Anderson2008a}. The concept is a generalisation of the security
-engineeting principle of an `air gap' between systems handling classified
+engineering principle of an `air gap' between systems handling classified
 information. Recently, however, Clive Robinson has proposed a more general
 concept of an `energy gap' that encompasses more than simply distance: in other
 words, active and passive defenses, cryptography work factor, and emanations
@@ -224,7 +224,7 @@ raster scanning. But for backwards-compatibility reasons, it is often more
 cost-effective to add a raster-scanning interface layer that makes the new
 display work like the old CRT displays, on a video signal. Interestingly,
 \citeauthor{Kuhn2002} (\citeyear{Kuhn2002}) found that it was this extra
-compatbility interface layer that was the source of most of the exploitable
+compatibility interface layer that was the source of most of the exploitable
 TEMPEST radiation, in the RF region. If it wasn't the raster-scanning emulation
 layer, then it was poorly-shielded cables between the computer and the display,
 or inside the display, that were the richest source of RM emanations. This
@@ -268,7 +268,7 @@ low-speed serial communications, up to a few \si{\kilo\bit\per\second}, the
 visible flicker of a single LED tracking the mark/space state of a serial
 communication channel is of benefit for routine monitoring and troubleshooting.
 
-LED pilot lamp indicators on power rails are a surprising source of decodable
+LED pilot lamp indicators on power rails are a surprising source of decodeable
 optical emanations, but perhaps less surprising in light of
 \citeauthor{Kocher1999}'s (\citeyear{Kocher1999}) discovery of \emph{power
 analysis}---the fact that carelessly implemented cryptographic algorithms,
@@ -305,7 +305,7 @@ multi-colour LEDs. It is reasonable to assume, therefore, that a combination
 visible/infrared LED might be produced, even without elaborate fabrication
 facilities, so long as the epoxy envelope is transparent to both wavelengths.
 Materials for such a chimera could be sourced commercially: dice from standard
-LEDs (decapculated in \ce{HNO3} at about \SI{80}{\celsius}; wash with
+LEDs (decapsulated in \ce{HNO3} at about \SI{80}{\celsius}; wash with
 \ce{(CH3)2CO}), with a lead frame salvaged from a standard bi-colour LED,
 de-soldered under a microscope, taking care to preserve the gold wire bonds,
 then re-encapsulated in a low-viscosity UV-curing epoxy, chosen for
@@ -402,7 +402,7 @@ detectors for optical TEMPEST. Their only drawbacks are cost, size, fragility,
 and the requirement for special high voltage power supplies. Photomultiplier
 tubes, however, have the advantage of not requiring a separate transimpedance
 amplifier, which photodiodes do. Transimpedance amplifiers tend to have a severe
-gain--bandwidth tradeoff; at high gains (a few tens of \si{\deci\bel}), the
+gain--bandwidth trade-off; at high gains (a few tens of \si{\deci\bel}), the
 bandwidth may be only a few \si{\kilo\hertz}. In contrast, typical
 photomultiplier tubes offer direct amplification of \SI{100}{\deci\bel}, and
 when the optical flux is low, and the need for response speed high, a
@@ -531,7 +531,19 @@ The historical focus by TEMPEST military standard writers on RF and acoustic
 emanations, and the fact that they overlooked optical methods (with the
 exception of shoulder surfing) for so long, speaks to a sort of contextual
 blindness. With the publication nearly two decades ago of the first two papers
-about optical TEMPEST \cite{Loughry2002a,Kuhn2002}, open sources information on 
+about optical TEMPEST \cite{Loughry2002a,Kuhn2002}, open source information on
+compromising emanations is booming. Before the year 2000, only a handful of
+articles had been published in the unclassified literature on the subject of
+TEMPEST or emanations security. The most famous was \citeauthor{vanEck1985}
+(\citeyear{vanEck1985}), squarely in the traditional domain of RF.
+(Interestingly, few books mentioned acoustic emanations; the concept was nearly
+lost until rediscovered by the academic community in the early 2000s.) Covert
+channel analysis, following the publication of the Rainbow series in
+\citeyear{NCSC-TG-030}, similarly died out, probably from existential despair
+\cite{NCSC-TG-030}. \citeauthor{Kocher1999}'s seminal paper on side channels
+reignited interest in what \cite{Wright1987} had been saying for decades, and
+since then, the spectrum has been widened to include magnetic fields and
+gravitational waves \cite{Guri2018b,Abbott2016b}.
 
 \bibliographystyle{./agsmitalic} % This is my twiddled version of agsm.bst.
 \bibliography{consolidated_bibtex_file}
