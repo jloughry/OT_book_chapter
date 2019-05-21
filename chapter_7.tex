@@ -218,7 +218,47 @@ tendency has continued to the present day.
 
 \subsection{Point Sources}
 
-zzzzzzzzz
+Not counting video displays, point sources are by far the most common sort of
+exploitable optical TEMPEST radiation sources. Incandescent lamps---which were
+actually used for console indicators on early mainframe computers---make for
+poor reception, as the filament has a relatively large thermal mass, imposing a
+low-pass filter with a long time constant on the resulting blackbody radiator
+(on the order of \SI{100}{\milli\second}). Gas discharge lamps, such as the
+NE-2 neon glow lamp, are much faster, but not widely used these days.
+Overwhelmingly, discrete indicators in the 21st century are LEDs.
+
+\subsubsection{Optical Characteristics of Light Emitting Diodes}
+
+LEDs are inexpensive, bright, require little power, and are available ib many
+different shapes and colours. All these qualities make them ideal visual
+indicators. LEDs are also fast; {\it i.e.}, they turn on and off quickly, which
+is less important, given the limitations of human eyes. (Turning LEDs on and
+off more at more than about \SI{30}{\hertz} is pointless in most applications,
+as a human will see only a steady glow.) The extra speed of LEDs is actually
+used to advantage in persistence-of-vision (PoV) displays and pulse-width
+modulation (PWM) dimming applications, which begin to hint at the possibilities
+for high-capacity optical TEMPEST vulnerabilities.
+
+To connect LED indicators to optical TEMPEST, consider the source of any
+information impressed onto the visual indicator. It may originate from storage
+device activity (disk drives, tape drives, or emulated storage devices in
+memory), serial communication channels---very common---or network interfaces.
+Serial comms were where the first detectable optical TEMPEST emanations were
+found.
+
+LED pilot lamp indicators on power rails are a surprising source of decodable
+optical emanations, but perhaps less surprising in light of
+\citeauthor{Kocher1999}'s (\citeyear{Kocher1999}) discovery of \emph{power
+analysis}---the fact that carelessly implemented cryptographic algorithms,
+running on commodity hardware, impose a time-varying load on the power supply
+of the computer that can be measured and interpreted. Combined with finite
+power supply regulation capacity and a good lock-in amplifier, secret keys can
+be deduced one bit at a time. An LED directly connected to the power rail,
+whilst intended as a simple power-on indicator, is fast enough, and sensitive
+enough to microscopic changes in voltage, to effectively amplitude-modulate a
+prefect mirror of the CPU's instantaneous power supply load as an optical
+signal. Defenses against this particular threat require interposing a low-pass
+filter between the power rail and the LED, as described in \cite{Loughry2006a}.
 
 \subsection{Sensors}
 Given these sources of compromising emanations (accidental or intentional), to
