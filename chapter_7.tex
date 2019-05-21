@@ -127,6 +127,19 @@ exploited from keyboards, video displays, printers, and even computer
 motherboards \cite{Wright1987,Asonov2004,Zhuang2005,Berger2006,Backes2010,
 Genkin2013,Genkin2018a,Kubiak2018f}.
 
+Mitigation of TEMPEST vulnerabilities, in the past when the risk was thought to
+be limited to RF and acoustical emanations, was based largely on the idea of a
+\emph{control zone}: to rely on the fact that emanations attenuate according to
+an inverse square law---shield them as much as possible, but then employ fences
+and guards to keep unauthorised receivers a safe distance away \cite[\S
+17.4.2]{Anderson2008a}. The concept is a generalisation of the security
+engineeting principle of an `air gap' between systems handling classified
+information. Recently, however, Clive Robinson has proposed a more general
+concept of an `energy gap' that encompasses more than simply distance: in other
+words, active and passive defenses, cryptography work factor, and emanations
+security extended throughout the electromagnetic, acoustic (or vibrational, or
+seismic), and chemical spectra \cite{Robinson2018a,Robinson2018b}.
+
 \begin{figure}[htp]
   \centering
   \includegraphics[width=\textwidth]{taxonomy.pdf}
@@ -179,7 +192,7 @@ set by the adversary. There are other sources to consider, however; infrared
 contain an additional infrared (IR) emitter that is independently controllable
 and has been employed as an invisible communication channel \cite{Maiti2018b}.
 
-\subsection{Area Sources}
+\subsection{Area Sources}\label{section:Markus}
 
 Area sources include illumination and video displays. Video displays based on
 cathode ray tube (CRT) technology used to be most prevalent but have largely
@@ -217,7 +230,7 @@ layer, then it was poorly-shielded cables between the computer and the display,
 or inside the display, that were the richest source of RM emanations. This
 tendency has continued to the present day.
 
-\subsection{Point Sources}
+\subsection{Point Sources}\label{section:incandescent}
 
 Not counting video displays, point sources are by far the most common sort of
 exploitable optical TEMPEST radiation sources. Incandescent lamps---which were
@@ -324,39 +337,55 @@ sensors will suffice, but what is needed particularly is an optical sensor with
 a fast response time. Photodiodes, photomultipliers (solid state or otherwise),
 phototransistors, photoresistors, or even some video cameras might be used.
 Still cameras are not suitable, because this is a phenomenon integrated over
-$t$.
+time.
 
 There are two kinds of sensors: imaging and non-imaging. Imaging sensors have
-some limited application in optical TEMPEST; they may capture multiple point
+some limited application in optical TEMPEST; they may be able to capture
+multiple point
 sources simultaneously, whilst co-ordinating those measurements in time, which
-can be useful in some situations, such as imaging an entire rack of LED
+can be useful in some situations, such as receiving from an entire rack of LED
 indicators at once. But to do this, the imaging detector must have a very high
 frame rate, and most video cameras do not. There exist high-speed video cameras
 but there is usually a frame-rate--resolution trade-off, as well as a
-frame-rate--sensitivity trade-off, so either lines of resolution or light
-sensitivity, or both, must be sacrificed for a sufficiently high frame rate.
-The minimum frame rate needed is ideally at least the bit interval of a serial
-data transmission, per Shannon's theorem.
+frame-rate--sensitivity trade-off, so either (1) lines of resolution or (2)
+light sensitivity, or both, must be sacrificed to gain a sufficiently high
+frame rate. The minimum frame rate required is ideally at least twice the bit
+interval of a serial data transmission, per Shannon's theorem.
 
 Non-imaging detectors are more practicable. Non-imaging detectors may have a
 direct line of sight to the source being observed, or not. If line-of-sight is
 not possible, then of course the signal-to-noise ratio may be poor, but worse,
 multiple sources, if they are active within the field of view of the detector,
-may become intermingled. The optical signals combine additively. If that
-happens, the situation is not hopeless, as was demonstrated, at least in
-simulation, in \cite[\S 8]{Loughry2002a}. There it was shown that multiple
+may become intermingled. Optical signals at the same wavelength combine
+additively. If that
+happens, the situation is not in fact hopeless, as was demonstrated, at least
+in simulation, in \cite[\S 8]{Loughry2002a}. There it was shown that multiple
 uncorrelated sources, even having the same bit interval, could be separated
 unambiguously despite the bit interval not being known {\it a priori}. As soon
 as the line code can be determined with reasonable confidence, then the bit
 interval can be guessed with high probability, and this is independent of the
 individual bit intervals of $n$ uncorrelated signals. The time resolution of
 the sensor, though, must be high, and low signal levels or a noisy detector
-will make the problem more difficult. A special case of non-line-of-sight
-optical TEMPEST is fibre-optic media, either passive (eavesdropping via a dark
-fibre) or active (observation of the un-capped radiation from a fibre-optic
-transmitter) but it reduces to the same two problems as line-of-sight or
-non-line-of-sight optical TEMPEST: if multiple signals are additively mixed,
-they can be separated.
+will make the problem more difficult.\footnote{As has been shown, however,
+in numerous recent papers by other research groups, statistical recovery of
+extremely low quality signals from acoustical vibrations, for example, is
+highly amenable to machine learning (ML), hidden Markov models, and Fourier
+analysis
+\cite{,Asonov2004,Zhuang2005,Berger2006,Backes2010,Genkin2013,Kubiak2018f,
+Genkin2018a}. Digital signal processing can pull a usable signal out of what
+appears to be hopelessly noisy data; see \cite[Figure~4]{Loughry2002a}.} A
+special case of non-line-of-sight \emph{imaging} interception
+is the work of \citeauthor{Backes2008} \cite{Backes2008,Raguram2011,Xu2013a}.
+these researchers showed that typed input and screen contents could both be
+deconvolved from distorted reflections off shiny objects in the vicinity.
+Another special case of non-line-of-sight optical TEMPEST is that of
+fibre-optic media, either passively (eavesdropping via a dark fibre) or active
+(observation of the un-capped radiation from a fibre-optic transmitter) but it
+reduces to the same two problems as line-of-sight or non-line-of-sight optical
+TEMPEST: as has been shown, if multiple signals at identical wavelengths are
+additively mixed, they can be separated mathematically. (Optical filters or
+spectroscopic methods can be used, if necessary, to separate overlapping
+signals at different wavelengths.)
 
 Optical detectors tend to be one of photoconductive, photoresistive, or
 photoelectronic. Photoconductive detectors include photodiodes and
@@ -379,78 +408,106 @@ photomultiplier tubes offer direct amplification of \SI{100}{\deci\bel}, and
 when the optical flux is low, and the need for response speed high, a
 photomultiplier tube cannot be beat.
 
-Additional collection optics, {\it i.e.}, telescope or fibre optics, are useful
-for increasing the light-gathering capability of the detector; if light levels
-from the source are low, external optics will improve the sensitivity of the
-detector by the square of the aperture of the optics, divided by the area of
-the detector (typically on the order of \SI{1}{\square\milli\metre}). While the
-aperture of the collecting optics determines the amount of light collected, the
-focal length of the eyepiece (if using a conventional telescope) determines the
-field of view. External optics can make all the difference between a usable
-signal level and impossibly challenging conditions, but pointing stability is
-crucial at high magnification.
+Additional collection optics, {\it i.e.}, telescopes or fibre optics, are
+useful for increasing the light-gathering capability of the detector; if light
+levels from the source are low, external optics will improve the sensitivity of
+the detector by the square of the aperture of the optics, divided by the area
+of the detector (typically on the order of \SI{1}{\square\milli\metre}). While
+the aperture of the collecting optics determines the amount of light collected,
+the focal length of the eyepiece (if using a conventional telescope) determines
+the field of view: $f/N$ numbers, for larger values of $N$, lead to a narrower
+field of view, important when aiming. External optics can make all the
+difference between a usable signal level and impossibly challenging conditions,
+but pointing stability is crucial at high magnification to avoid vibrations.
 
-\subsection{Induced Emanations}
-
+\subsection{Covert Channels}
 \label{section:injection_attacks}
-
-\subsection{The clock recovery problem}
-
-(Figure from 2002 paper)
 
 Depending on the nature of the leakage, information leakage through optical
 emanations may or may not be a covert channel. By the classical definition,
-due to \cite{Lampson1973}, a covert channel is made of a pair of communicating
-processes, but in many cases, the source of compromising optical emanations
-is in hardware, not a programme running on the CPU.
+due to \cite{Lampson1973}, a covert channel is made from a pair of
+communicating processes, but in many cases, the source of compromising optical
+emanations is in hardware, not a programme running on the CPU.
 
-electromagnetic but in the optical spectrum; we consider that to include at
-least infrared (wavelengths longer than \SI{700}{\nano\metre}) because of the
-ubiquitousness of light emitting diode (LED) sources in that range and their
-convenient invisibility to humans.
+\subsection{Injection Attacks}
 
-\begin{comment}
-\sidebar{\centerline{\textbf{How dangerous?}}\medskip
-\textbf{Class I} optical emanations are correlated only minimally with the state
-of a device; they tell if it is on or off. \textbf{Class II} emanations leak
-information about the activity level of a device---is it busy or idle?
-\textbf{Class III} optical emanations are correlated with the contents of data,
-and are extremely hazardous.}
-\end{comment}
-
-Cite \cite{Allain2019}.
-
-\section{History}
-The U.S.\ National Security Agency (NSA) named TEMPEST, as far as we know. We
-don't even know for sure that the word is not an acronym. It is believed to
-be a code name, \textsc{Tempest}\footnote{Evidence for it is shaky but there
-was supposedly another programme called \textsc{Teapot} dealing with
-stimulated RF compromising emanations \cite[p.~539]{Anderson2008a} and
-partially corroborated in December of 2013 by Edward Snowden (NSA ANT
-catalogue).} but evidence in the open literature is scarce; the only clear
-original source is one declassified document dating from 1972 in which
+A recently discovered new aspect of optical TEMPEST is injection attacks. In
+the historical record of TEMPEST, the U.S.\ National Security Agency (NSA)
+named TEMPEST, as far as we know. We don't even know for sure that the word is
+not an acronym. TEMPEST is generally believed to be a code name,
+\textsc{Tempest}. Evidence for it is shaky, but there was supposedly
+another programme called \textsc{Teapot} that dealt with stimulated
+compromising RF emanations \cite[p.~539]{Anderson2008a} and partially
+corroborated in December 2013 by Edward Snowden (NSA ANT
+Catalogue, 2013). The two names are suggestive of a connection through the phrase
+`\textsc{Tempest} in a \textsc{Teapot}'---an American idiom---attributed at
+least to Cicero (\emph{On the Laws}, 52 BC) \cite[p.~173]{Cicero2017}
+but evidence in the open literature is scarce; the only clear original source
+for the name is a single unclassified document dating from 1972 in which
 everything related to emanations other than RF is redacted
 \cite{NSAtempest2007}.
-\subsection{Information Leakage}
-\subsubsection{Electromagnetic}
-Field telephones in WWI; \emph{funkspiel} in WWII; electromechanical cypher
-machines in West Berlin. (This topic is covered well elsewhere in the book.)
+
+RF injection attacks have been known (or suspected) for a long time; the
+discovery of a passive microwave RF eavesdropping device in the the U.S.\
+embassy in Moscow in 1952 (seemingly in operation since 1945) was publicly
+disclosed in 1960 \cite{Stong1968a}. It is thought to have been designed by
+L\'{e}on Theremin. More recently, NSA's ANT catalogue lists several available
+methods under the code name \textsc{Vagrant} for modulating a remotely
+impressed carrier wave with, for example, the `red' signal of a VGA graphic
+display by means of a chip embedded (by NSA) in the VGA cable connector's
+shell.
+
+The first report of the theoretical possibility of an \emph{optical} injection
+attack came in 2018 at a conference in Amsterdam \cite{Loughry2018a}. The idea
+stems from the discovery in 1973 by \citeauthor{Mims1973b} of the fact that
+common LEDs are reversible: they can act as photodiode detectors, both in the 
+the forward-biased (photovoltaic) and reverse-biased (photoconductive) modes
+\cite{Mims1973b}.\footnote{Unintended photosensitivity of junction
+semiconductor devices has been known since at least the nineteen-seventies;
+UV-eraseable programmable read-only memory (EPROM) chips take advantage of the
+fact.}
+
+The phenomenon languished in obscurity for many years, used
+occasionally by electronics designers for setting the brightness of a display
+in sunlight, or for other low-cost sensing duties
+\cite{MERL2003a,Karadaglic2007a}. But it wasn't until recently that the
+confluence of several factors led to the possibility of an exploitable attack
+vector. The first came in 1993, when ultra-high-brightness LEDs were invented
+\cite{Stringfellow1997}. High brightness LEDs are capable of photovoltaically
+generating significant amounts of power \cite{Allain2019}. The second advance
+came in 1996, with the advent of general-purpose input/output (GPIO) pins with
+programmable pull-up and pull-down resistors on commodity microcontrollers
+\cite{Atmel2013}. GPIOs, provided in relative abundance by virtually all modern
+microcontrollers, can be set under software control to be digital outputs
+\emph{or} inputs. Programmable pull-up and pull-down resistors---intended for
+use with switches and buttons or to allow subsystems to share a communication
+bus like I\textsuperscript{2}C---are far more useful to an adversary because
+they can be set in nonsensical ways.
+
+This opens up the definite vulnerability that any attacker
+with the capability to modify the software running on one of these
+microcontrollers---ubiquitous in the Internet of Things (IoT)---can reverse the
+operation of any convenient LED indicator and turn it into an optical receiver.
+
+The following year, experimental results were presented at the same conference,
+this time in Barcelona, Spain \cite{Loughry2019}. It was shown the attack is
+possible in principle, under certain circumstances. In essence, the hardware
+designer needs to have made a particular kind of mistake in the design, which
+clears the way for the vulnerability.\footnote{The trick only works if the
+designer chose to save a power pin by connecting an LED to a pair of GPIO pins,
+which might make sense if unused GPIO pins happen to be available.} It is
+absolutely a covert channel, because the attacker needs be able to control a
+software process running inside the target system's security boundary. As such,
+the vulnerability can be mitigated in two ways: firstly, by configuration
+control of the embedded software; and secondly, by preferring certain
+less-vulnerable circuit variants when designing in LED indicators. Note ({\it
+cf.} \S\ref{section:incandescent}) that incandescent lamps used as visual
+indicators are not vulnerable to this attack.
+
+% I don't want to try to get permission to use these figures in a book.
+
 \begin{comment}
-\sidebar{\centerline{\textbf{Video Cameras}}\medskip
-It is tempting to think of using video cameras to capture an entire rack of LED
-indicators at once, but that won't work. The reason is because video cameras
-have a relatively low frame rate---usually 30--240 frames per
-second---and this is not fast enough to capture the transitions we're
-interested in.}
-\end{comment}
-\subsection{TEMPEST}
-The protection of information from remote eavesdropping; air gaps; control
-zones; protected distribution systems (PDS)\footnote{Visibility, stories of
-poison gas, flammable gas, pressure gauges---reference Anderson (2001).} The
-inclusion of acoustic but overlooking of optical, with the exception of
-shoulder surfing. Contextual blindness?
-\subsection{Optical}
-LEDs and CRTs---Figure \ref{figure:slow-mo_guys_crt}.
+
 \begin{figure}[ht]
   \centering
   \includegraphics[width=3in]{slow-mo_guys_crt.png}
@@ -458,105 +515,24 @@ LEDs and CRTs---Figure \ref{figure:slow-mo_guys_crt}.
     beam exciting phosphor dots \protect\cite{Free2018}.}
   \label{figure:slow-mo_guys_crt}
 \end{figure}
-\section{Physical Principles}
-Photons, energy, generation atmospheric absorption. Recent development of
-high efficiency LEDs (and the unexpected effect that had on reversing LEDs).
-Telescopic optics, fibreoptic collection.
+
 \begin{figure}[ht]
   \centering
   \includegraphics[width=3in]{SupraFAXmodem_144_LC_photo_courtesy_Wikipedia.jpg}
   \caption{Some LED indicators leak information.}
   \label{figure:modem}
 \end{figure}
-\subsection{The Unreasonable Effectiveness of Signal Processing}
-One surprising thing, to anyone unfamiliar with digital signal processing, is
-how effectively it can pull a usable signal out of what appears to be
-hopelessly noisy data. An example may be seen in Fig.\ 4 of
-\cite{Loughry2002a}.
 
-Need a new figure here.
+\end{comment}
 
-\section{Current Research}
-Guri \emph{et al.} But they are covert channels. But these are covert
-channels. Difference between covert channels and side channels
-(ref.\ Kocher).
-\subsection{Resurgence of Interest 201?--present}
-Aside from the `Compromising Reflections' paper, not much happened until
-around 2010, except for\ldots\footnote{Parts of this section was presented at
-EMC Europe 2018, in Amsterdam, the Netherlands (\emph{International Symposium
-and Exhibition on Electromagnetic Compatibility}), 27--30 August 2018
-\cite{Loughry2018a}.}
-\subsection{Perspective}
-It's not only LEDs; and LEDs are not only used as status indicators; Figure:
-\emph{all} the information channels in and out of a PC---or more accurately,
-an information processing system. A new conception of control zone;
-Robinson's `energy gap' concept and its applicability to crypto.
-\section{Future Directions}
-Unpublished research
-\subsection{LED Reversing}
-Recent research---as yet unpublished---extends the idea of information leakage
-through LEDs in the other direction. Unintended photosensitivity of junction
-semiconductor devices has been known since at least the nineteen-seventies;
-UV-eraseable programmable read-only memory (EPROM) chips take advantage of the
-fact. Mims \citeyear{Mims1973b} was first to note in print that LEDs work as
-photodiodes, both in the forward-biased (photovoltaic) and reverse-biased
-(photoconductive) modes.
+\section{Conclusions}
 
-Would an unmodified LED, with leads splayed out, act as a WiFi powered
-optical bug? Could a \SI{5}{\giga\hertz} WiFi illumination power it in
-reverse bias photoconductive mode to turn it into an optical RF
-modulator? It's a nonlinear junction (diode) detector already---but can
-incident \emph{optical} radiation modulate through the diode the reflection
-from the leads of the ambient microwave interrogation carrier?
+The historical focus by TEMPEST military standard writers on RF and acoustic
+emanations, and the fact that they overlooked optical methods (with the
+exception of shoulder surfing) for so long, speaks to a sort of contextual
+blindness. With the publication nearly two decades ago of the first two papers
+about optical TEMPEST \cite{Loughry2002a,Kuhn2002}, open sources information on 
 
-Modern microprocessors do not expose their address and data bus lines as
-earlier ones did. But what happens when LEDs on external pins (whether
-configured for output, by the system designer, or reconfigured for input by an
-attacker) drive those pins unexpectedly?
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=\textwidth]{timeline.pdf}
-  \caption{Confluence of several technological developments made reversing LEDs
-    possible.}
-  \label{figure:timeline}
-\end{figure}
-first visible LEDs for indicators in 1968 (Figure \ref{figure:timeline}).
-photoresponsivity of LEDs in 1973
-first high brightness LEDs used in 1993
-GPIO in 2011 (Google Trends) although the concept dates to Intel 8255 and MOS
-6522. The Atmega8 used by Arduino introduced programmable pull-up and pull-down
-resistors in 1996 \cite{Mims1973b,Atmel2013,Stringfellow1997}.
-
-External hardware pull-up or pull-down resistors, as on the Intel 8255 and MOS
-6522 chips used in the 1980s, were of course inaccessible to an adversary; CMOS
-variants of the 8255 had internal pull-up resistors but they were not
-programmable. (Automatically configured pull-up or pull-down resistors may be
-considered a special case of external discrete hardware components.)
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=2in]{nonsensical.pdf}
-  \caption{Programmable pull-up and pull-down resistors can be abused by
-    setting them in non-sensical ways, such as this, to reverse-bias an LED
-    and sense it---as a photodiode---in the (much faster) photoconductive
-    mode.}
-  \label{figure:nonsensical}
-\end{figure}
-Programmable pull-up and pull-down resistors, introduced in 1996 with the
-ATmega8 microcontroller \cite{Atmel2013} are far more useful to an adversary
-adversary because they can be set in nonsensical ways (Figure
-\ref{figure:nonsensical}).\footnote{The trick only works if the designer chose
-to save a power pin by connecting an LED to a pair of GPIO pins, which might
-make sense if unused GPIO pins happen to be available.}
-
-\emph{Cf.}\ Snowden's disclosures of NSA's TAO catalogue, for a certainty.
-\subsubsection{Classical covert channels}
-\subsubsection{Dead blow hammer}
-
-\section{Bell's Inequality}
-For the \SI{33}{\pico\second} interval between those two points, the light does
-not exist in this universe.
-
-Bell's Inequality \cite{Bell1964}.
 \bibliographystyle{./agsmitalic} % This is my twiddled version of agsm.bst.
 \bibliography{consolidated_bibtex_file}
 \end{document}
