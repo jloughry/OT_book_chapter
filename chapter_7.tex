@@ -4,10 +4,11 @@
 \usepackage{graphicx}
 % \usepackage{showframe} % for testing
 \usepackage{url}
-\usepackage{siunitx}
+\usepackage[binary-units,alsoload=hep]{siunitx}
 \usepackage{natbib}
 \usepackage{har2nat} % har2nat must be loaded after natbib.
 \usepackage{bigstrut} % for row spacing in tables
+\usepackage[version=3]{mhchem} % for chemical equations
 \usepackage{GoudyIn,lettrine}
 \renewcommand\LettrineFontHook{\GoudyInfamily}
 \usepackage{verbatim} % for the comment environment
@@ -240,11 +241,19 @@ modulation (PWM) dimming applications, which begin to hint at the possibilities
 for high-capacity optical TEMPEST vulnerabilities.
 
 To connect LED indicators to optical TEMPEST, consider the source of any
-information impressed onto the visual indicator. It may originate from storage
-device activity (disk drives, tape drives, or emulated storage devices in
-memory), serial communication channels---very common---or network interfaces.
-Serial comms were where the first detectable optical TEMPEST emanations were
-found.
+information impressed onto the visual indicator, as in Table
+\ref{table:class_III}. Information may originate from storage device activity
+(disk drives, tape drives, or emulated storage devices in memory), serial
+communication channels---extremely common---or network interfaces. Serial comms
+were actually where the first detectable optical TEMPEST emanations were found.
+
+LEDs can be electrically modulated well into the \si{\mega\hertz} range by
+standard digital logic circuits, even inadvertently. (As evidence, observe that
+LEDs are used as fibre optic transmitters for---relatively---low speed links,
+short distance links, up to a few \si{\mega\bit\per\second}.) In the case of
+low-speed serial communications, up to a few \si{\kilo\bit\per\second}, the
+visible flicker of a single LED tracking the mark/space state of a serial
+communication channel is of benefit for routine monitoring and troubleshooting.
 
 LED pilot lamp indicators on power rails are a surprising source of decodable
 optical emanations, but perhaps less surprising in light of
@@ -259,6 +268,54 @@ enough to microscopic changes in voltage, to effectively amplitude-modulate a
 prefect mirror of the CPU's instantaneous power supply load as an optical
 signal. Defenses against this particular threat require interposing a low-pass
 filter between the power rail and the LED, as described in \cite{Loughry2006a}.
+
+\subsection{Channel Coding}
+
+The source of optical emanations may be deliberate or accidental. The
+accidental kind are more common. Accidental optical emanations may occur as a
+result of hardware or software errors; hardware design errors are the usual
+cause. Accidental optical emanations are modulated by accidental means, so very
+simple channel coding is the most likely to be found: amplitude modulation
+using on/off keying; the likelihood of more complex channel coding to occur by
+chance is low, with the possible exception of some form of pulse width
+modulation. Deliberate optical emanations have much greater latitude in form,
+power, modulation, and coding.
+
+Deliberate introduction of compromising optical emanations may be done through
+any combination of hardware and/or software. The possibilities for an adversary
+with access to make hardware modifications are vast: such an adversary might
+employ multiple emitters, complex modulation schemes for speed, reliability, or
+stealth; and even invisible wavelengths. It is demonstrably possible to
+co-encapsulate multiple LED emitter chips (`dies') in a single standard
+\SI{5}{\milli\metre} package, as evidenced by the availability of commercial
+multi-colour LEDs. It is reasonable to assume, therefore, that a combination
+visible/infrared LED might be produced, even without elaborate fabrication
+facilities, so long as the epoxy envelope is transparent to both wavelengths.
+Materials for such a chimera could be sourced commercially: dice from standard
+LEDs (decapculated in \ce{HNO3} at about \SI{80}{\celsius}; wash with
+\ce{(CH3)2CO}), with a lead frame salvaged from a standard bi-colour LED,
+de-soldered under a microscope, taking care to preserve the gold wire bonds,
+then re-encapsulated in a low-viscosity UV-curing epoxy, chosen for
+transmissivity at the desired wavelengths, in a silicone mould. The result
+would be visually indistinguishable from a standard LED indicator except under
+magnification, but would emit in both wavelengths at the same time.
+Alternatively, a version could be made that emits visible light when
+forward-biased and invisible light when reverse-biased, although that would
+require more elaborate driver electronics. The greater efficiency of infrared
+LEDs would mean that the luminous intensity at IR wavelengths would be much
+higher than in the visible spectrum, thereby increasing the effective range of
+the chimera LED.
+
+Other possibilities open to the deliberate attacker with access to the hardware
+design---either at the point of manufacture or intercepted later---include use
+of multiple LED indicators simultaneously for one channel, either in parallel
+(for more energy) or quadrature modulated (for reliability and ease of clock
+recovery on the receiving end). Manchester coding, which is return-to-zero
+waveform, has the advantage of being self-clocking, making the clock recovery
+problem much easier. Use of several LEDs in a Manchester-like coding scheme
+also has the advantage (for the transmitter) of modulating the LEDs at
+approximately twice the data rate, likely making the visible flickering of the
+LEDs less noticeable to an observer. This can be an advantage for stealth.
 
 \subsection{Sensors}
 Given these sources of compromising emanations (accidental or intentional), to
