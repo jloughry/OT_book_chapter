@@ -55,7 +55,7 @@ external hardware such as an electro-optic modulator is needed for those
 methods. Amplitude modulation, on the other hand, is easy with the resources
 available (and sometimes even happens accidentally). Optical TEMPEST
 vulnerabilities most often depend on the accidental or improvised existence of
-a modulated---or modulable---channel, and AM is likely the simplest and most
+a modulated---or modulatable---channel, and AM is likely the simplest and most
 straightforward modulation method to implement.
 
 On-off keying (OOK) is the simplest AM method and the most likely to occur
@@ -92,7 +92,8 @@ vulnerability.
 
 \begin{table}[ht]
 \caption{The original classification system for risk level of optical TEMPEST
-radiation, reproduced from \citeauthor{Loughry2002a}, \citeyear{Loughry2002a}.}
+radiation. This table reproduced from \citeauthor{Loughry2002a},
+\citeyear{Loughry2002a}.}
 \medskip
 \label{table:class_III}
 \centering
@@ -135,7 +136,7 @@ and guards to keep unauthorised receivers a safe distance away \cite[\S
 engineering principle of an `air gap' between systems handling classified
 information. Recently, however, Clive Robinson has proposed a more general
 concept of an `energy gap' that encompasses more than simply distance: in other
-words, active and passive defenses, cryptography work factor, and emanations
+words, active and passive defences, cryptography work factor, and emanations
 security extended throughout the electromagnetic, acoustic (or vibrational, or
 seismic), and chemical spectra \cite{Robinson2018a,Robinson2018b}.
 
@@ -242,7 +243,7 @@ Overwhelmingly, discrete indicators in the 21st century are LEDs.
 
 \subsubsection{Optical Characteristics of Light Emitting Diodes}
 
-LEDs are inexpensive, bright, require little power, and are available ib many
+LEDs are inexpensive, bright, require little power, and are available in many
 different shapes and colours. All these qualities make them ideal visual
 indicators. LEDs are also fast; {\it i.e.}, they turn on and off quickly, which
 is less important, given the limitations of human eyes. (Turning LEDs on and
@@ -267,7 +268,7 @@ low-speed serial communications, up to a few \si{\kilo\bit\per\second}, the
 visible flicker of a single LED tracking the mark/space state of a serial
 communication channel is of benefit for routine monitoring and troubleshooting.
 
-LED pilot lamp indicators on power rails are a surprising source of decodeable
+LED pilot lamp indicators on power rails are a surprising source of decodable
 optical emanations, but perhaps less surprising in light of
 \citeauthor{Kocher1999}'s (\citeyear{Kocher1999}) discovery of \emph{power
 analysis}---the fact that carelessly implemented cryptographic algorithms,
@@ -278,7 +279,7 @@ be deduced one bit at a time. An LED directly connected to the power rail,
 whilst intended as a simple power-on indicator, is fast enough, and sensitive
 enough to microscopic changes in voltage, to effectively amplitude-modulate a
 prefect mirror of the CPU's instantaneous power supply load as an optical
-signal. Defenses against this particular threat require interposing a low-pass
+signal. Defences against this particular threat require interposing a low-pass
 filter between the power rail and the LED, as described in \cite{Loughry2006a}.
 
 \subsection{Channel Coding}
@@ -304,8 +305,9 @@ multi-colour LEDs. It is reasonable to assume, therefore, that a combination
 visible/infrared LED might be produced, even without elaborate fabrication
 facilities, so long as the epoxy envelope is transparent to both wavelengths.
 Materials for such a chimera could be sourced commercially: dice from standard
-LEDs (decapsulated in \ce{HNO3} at about \SI{80}{\celsius}; wash with
-\ce{(CH3)2CO}), with a lead frame salvaged from a standard bi-colour LED,
+LEDs---decapsulated in nitric acid (\ce{HNO3}) at about \SI{80}{\celsius}; wash
+with acetone (\ce{(CH3)2CO})---with a lead frame salvaged from a standard
+bi-colour LED,
 de-soldered under a microscope, taking care to preserve the gold wire bonds,
 then re-encapsulated in a low-viscosity UV-curing epoxy, chosen for
 transmissivity at the desired wavelengths, in a silicone mould. The result
@@ -341,7 +343,8 @@ time.
 There are two kinds of sensors: imaging and non-imaging. Imaging sensors have
 some limited application in optical TEMPEST; they may be able to capture
 multiple point
-sources simultaneously, whilst co-ordinating those measurements in time, which
+sources simultaneously, whilst co\"{o}rdinating those measurements in time,
+which
 can be useful in some situations, such as receiving from an entire rack of LED
 indicators at once. But to do this, the imaging detector must have a very high
 frame rate, and most video cameras do not. There exist high-speed video cameras
@@ -545,6 +548,5 @@ since then, the spectrum has been widened to include magnetic fields and
 gravitational waves \cite{Guri2018b,Abbott2016b}.
 
 \bibliographystyle{./agsmitalic} % This is my twiddled version of agsm.bst.
-\cleardoublepage
 \bibliography{consolidated_bibtex_file}
 \end{document}
