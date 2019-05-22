@@ -1,5 +1,4 @@
-% \documentclass[a4paper,twoside,oldfontcommands]{memoir}
-\documentclass[a4paper,twoside,11pt]{book}
+\documentclass[a4paper,twoside,11pt,openany]{book}
 \usepackage[nomarginpar,margin=2.5cm]{geometry}
 \usepackage{graphicx}
 % \usepackage{showframe} % for testing
@@ -19,7 +18,7 @@
 \title{New Book}
 \author{Joe Loughry}
 \setcounter{chapter}{6} % This chapter will be Chapter 7 of the book.
-\setcounter{page}{262} % Page 263 will be the first page of this file.
+\setcounter{page}{263} % Page 263 will be the first page of this file.
 \thispagestyle{empty}
 \chapter{Optical TEMPEST}
 \lettrine[lines=3]{T}{he} leakage of information out from a system through a
@@ -546,5 +545,6 @@ since then, the spectrum has been widened to include magnetic fields and
 gravitational waves \cite{Guri2018b,Abbott2016b}.
 
 \bibliographystyle{./agsmitalic} % This is my twiddled version of agsm.bst.
+\cleardoublepage
 \bibliography{consolidated_bibtex_file}
 \end{document}
